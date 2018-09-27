@@ -34,7 +34,7 @@ def band_phase_cal(par):
             os.system('cp -r ' + par['band_cal2'] + '.aver ' + bpass_table)
 
     os.system('mfcal vis=' + bpass_table + ' interval=5 options=interpolate')
-    if par['project'] == 'C1545' or par['project'] == 'C968':
+    if par['project'] == 'C1545' or par['project'] == 'C968' or par['project'] == 'CX062' or par['project'] == 'C1341':
         os.system('gpcal vis=' + bpass_table + ' interval=0.1 options=nopol,noxy')
     else:
         os.system('gpcal vis=' + bpass_table + ' interval=0.1 options=xyvary')

@@ -266,7 +266,7 @@ thresh_lo = 2.0 * rms;
 
 # Blind CLEAN to 5-sigma
 if mosaic: run_command("mossdi map=" + file_map + " beam=" + file_beam + " out=" + file_model + " niters=1000 cutoff=" + str(thresh_hi));
-else: run_command("clean map=" + file_map + " beam=" + file_beam + " out=" + file_model + " niters=1000 cutoff=" + str(thresh_hi));
+else: run_command("clean map=" + file_map + " beam=" + file_beam + " out=" + file_model + " niters=100000 cutoff=" + str(thresh_hi));
 
 # Restore image
 run_command("restor map=" + file_map + " beam=" + file_beam + " model=" + file_model + " out=" + file_restor);
@@ -287,8 +287,8 @@ run_command("fits op=xyin in=" + file_sofia_mask_fits + " out=" + file_sofia_mas
 run_command("maths exp=\"<" + file_sofia_mask + ">\" mask=\"<" + file_sofia_mask + ">.gt.0\" out=" + file_sofia_mask_2);
 
 # Repeat CLEAN down to 2-sigma
-if mosaic: run_command("mossdi map=" + file_map + " beam=" + file_beam + " out=" + file_model_2 + " niters=10000 cutoff=" + str(thresh_lo) + " region=\"mask(" + file_sofia_mask_2 + ")\"");
-else: run_command("clean map=" + file_map + " beam=" + file_beam + " out=" + file_model_2 + " niters=10000 cutoff=" + str(thresh_lo) + " region=\"mask(" + file_sofia_mask_2 + ")\"");
+if mosaic: run_command("mossdi map=" + file_map + " beam=" + file_beam + " out=" + file_model_2 + " niters=100000 cutoff=" + str(thresh_lo) + " region=\"mask(" + file_sofia_mask_2 + ")\"");
+else: run_command("clean map=" + file_map + " beam=" + file_beam + " out=" + file_model_2 + " niters=100000 cutoff=" + str(thresh_lo) + " region=\"mask(" + file_sofia_mask_2 + ")\"");
 run_command("restor map=" + file_map + " beam=" + file_beam + " model=" + file_model_2 + " out=" + file_restor_2);
 
 # Create final, masked cube

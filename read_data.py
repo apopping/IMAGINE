@@ -33,9 +33,17 @@ def read_data(par):
         os.system('mv ngc0024.' + str(par['frequency']) + ' ngc24.' + str(par['frequency']))
     if par['project'] == 'C3041' and par['target'] == 'ngc625' and par['configuration'] == 'h214':
         os.system('mv 1934-638.1417.2 1934-638.' + str(par['frequency']))
+    if par['project'] == 'C3041' and par['target'] == 'eso154-023':
+        os.system('mv eso154-g023.' + str(par['frequency']) + ' eso154-023.' + str(par['frequency']))
     if par['project'] == 'C968' and par['target'] == 'ngc625':
         os.system('mv ngc.' + str(par['frequency']) + ' ngc625.' + str(par['frequency']))
 
+    if par['project'] == 'CX294' and par['target'] == 'eso154-023':
+        os.system('mv eso154-g023.' + str(par['frequency']) + ' eso154-023.' + str(par['frequency']))
+    if par['project'] == 'CX062' and par['target'] == 'eso154-023':
+        os.system('mv eso154-g23.' + str(par['frequency']) + ' eso154-023.' + str(par['frequency']))
+    if par['project'] == 'C1341' and par['target'] == 'eso154-023':
+        os.system('mv e154.' + str(par['frequency']) + ' eso154-023.' + str(par['frequency']))    
 
     # get channel information
     command = 'prthd in=' + par['source'] + '> header.log'

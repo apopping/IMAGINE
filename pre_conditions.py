@@ -6,6 +6,7 @@ import numpy as np
 def pre_conditions(par):
     target = par['target']
     project = par['project']
+    configuration = par['configuration']
 
     if target == 'ngc24':
         # NGC 0024                       00h09m56.5s -24d57m47s G         554  0.001848
@@ -246,15 +247,37 @@ def pre_conditions(par):
     if target == 'eso154-023':
         # ESO 154- G 023  02h56m50.4s -54d34m17s G 574
         phase_cal ='0208-512'
-        frequency = 1414.7
+        frequency = 1417.7
         vmin = 150
-        nchan = 300
+        nchan = 250
         width = 4
         vel = 574
         line_vmin = 470
         line_vmax = 660
         if project == 'C3041':
             phase_cal = '0252-549'
+            frequency = 1417.7
+            nchan = 200
+            if configuration == '15a':
+                phase_cal = '0308-611'
+            if configuration == 'h168':
+                phase_cal = '0407-658'
+            if configuration == '750b':
+                vmin = 350
+                nchan = 100
+        if project == 'CX294':
+            frequency = 1417.7
+            vmin = 254
+            nchan = 150
+        if project == 'CX062':
+            phase_cal ='0252-712'
+            frequency = 1417
+        if project == 'C1341':
+            phase_cal = '0407-658'
+            frequency = 1418
+            vmin = 150
+            nchan = 250
+
 
 
 

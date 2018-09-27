@@ -4,30 +4,40 @@ from pre_conditions import pre_conditions
 
 
 par = {}
-par['target']='ic5052'
+par['target']='eso154-023'
 par['project']='C3157_plus'
 par['configuration'] = 'all'
 
 
 par = pre_conditions(par)
 
-os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/ic5052_h214_1.par')
-os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/ic5052_h214_2.par')
-os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/ic5052_h168_1.par')
-os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/ic5052_750d_1.par')
-# somthing wrong
-#os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/ic5052_750d_2.par')
-os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/ic5052_h75_1.par')
+#os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/eso154-023_h75_1.par')
+#os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/eso154-023_h168_1.par')
+#os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/eso154-023_h168_2.par')
+#os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/eso154-023_h214_1.par')
+#os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/eso154-023_ew352_1.par')
+#os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/eso154-023_ew367_1.par')
+#os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/eso154-023_750b_1.par')
+#os.system('python /home/apopping/imagine/pipeline/IMAGINE/process_imagine.py /home/apopping/imagine/new_pars/eso154-023_15a_1.par')
+
+
+
 
 os.chdir('/mnt/science1/imagine/processed/' + par['target'])
 
-vis='750d/*.uvlin,h214/*.uvlin,h168/*.uvlin,h75/*.uvlin'
+vis='15a/*.uvlin,750b/*.uvlin,ew367/*.uvlin,ew352/*.uvlin,h214/*.uvlin,h168/*.uvlin,h75/*.uvlin'
 
 map = par['target'] + '.map'
 beam = par['target'] + '.beam'
 model = par['target'] + '.model'
 restor = par['target'] + '.restor'
 imcont = par['target'] + '.map.imcont'
+
+# change from defaults
+par['vmin'] = 350
+par['nchan'] = 100
+
+
 line_set = 'velocity,' + str(par['nchan']) + ',' + str(par['vmin']) + ',' + str(par['width'])
 print 'starting invert'
 print 'line_set', line_set
