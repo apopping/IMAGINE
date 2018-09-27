@@ -8,7 +8,6 @@ from read_parameters import read_parameters
 from pre_conditions import pre_conditions
 from read_data import read_data
 from basic_flag import basic_flag
-from object_info import object_info
 from band_phase_cal import band_phase_cal
 from cont_uvlin import cont_uvlin
 from basic_clean import basic_clean
@@ -18,11 +17,11 @@ import sys
 import ast
 
 
-#
+
 # process_imagine.py input.par process_dir
 
 ###########################################
-##### Check whether input is correct ######
+# Check whether input is correct          #
 ###########################################
 if sys.argv[1:]:
     par_name=sys.argv[1]
@@ -68,6 +67,9 @@ par['par_name'] = par_name
 #################################
 par = pre_conditions(par)
 
+
+for i in range(10)
+    print i
 
 
 #####################################
