@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ddf2830-c0f9-4645-bae0-6b6bf52ca33f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/cal_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/clean_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/contsub_imlin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/contsub_uvlin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/flag_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/image_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/imagine_pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/make_moment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/quality_control.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/read_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/read_observation_parameters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/imagineV1.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/code/imagineV1.sqlite" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
