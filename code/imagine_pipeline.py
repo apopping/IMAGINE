@@ -151,7 +151,10 @@ if args.mode != 'line' and args.mode != 'cont':
     exit()
 
 # read the relevant observing parameters
-database = '/Users/attila/work/imagine/IMAGINE/db/imagineV1.sqlite'
+# path on my local machine
+database = '/Users/attila/work/imagine/IMAGINE/imagineV1.sqlite'
+# path on ICRAR system
+database = '/mnt/science1/imagine/code/IMAGINE-master/code/imagineV1.sqlite'
 obs_par = read_observation_parameters(args,database)
 
 # manual edit during development
