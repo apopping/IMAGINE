@@ -152,13 +152,13 @@ if args.mode != 'line' and args.mode != 'cont':
 
 # read the relevant observing parameters
 # path on my local machine
-database = '/Users/attila/work/imagine/IMAGINE/imagineV1.sqlite'
+database = '/Users/attila/work/imagine/IMAGINE/code/imagineV1.sqlite'
 # path on ICRAR system
 database = '/home/apopping/imagine/IMAGINE-master/code/imagineV1.sqlite'
 obs_par = read_observation_parameters(args,database)
 
 # manual edit during development
-obs_par['files'] = '2018-09-28_0532.C3157, 2018-09-28_0608.C3157'
+#obs_par['files'] = '2018-09-28_0532.C3157, 2018-09-28_0608.C3157'
 
 # convert the files into a list
 obs_par['files'] = obs_par['files'].replace(' ','')

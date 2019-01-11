@@ -28,6 +28,7 @@ def read_observation_parameters(args, db_file):
     obs_keys = [description[0] for description in cur.description]
     obs_par = dict(zip(obs_keys,obs_val[0]))
 
+
     # read other relevant parameters for the galaxy
     cur.execute("SELECT vel,vel_min,vel_max FROM galaxy WHERE target=" + repr(obs_par['target']))
     extra_val = cur.fetchall()
@@ -38,6 +39,7 @@ def read_observation_parameters(args, db_file):
     # add the extra paramaters to the dicitionary
     obs_par.update(extra_par)
 
+    print(obs_par)
 
     return obs_par
 

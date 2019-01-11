@@ -19,14 +19,14 @@ def read_data(args, obs_par):
     os.chdir(obs_par['configuration'])
 
     for file in obs_par['files']:
-        file_path = args.datadir + file
+        file_path = args.datadir + file.strip('\n')
         if not os.path.isfile(file_path):
             print(f"WARNING: The file {file_path} does not exist!")
             print("Continueuing script with next file if possible ...")
         else:
             # make a softlink to the workdirectory
             os.system('mkdir temp_links')
-            command = 'ln -s ' + file_path + ' temp_links/' + file
+            command = 'ln -s ' + file_path + ' temp_links/' + file.strip('\n')
             print(command)
             os.system(command)
 
