@@ -13,6 +13,7 @@ def contsub_uvlin(args,obs_par):
     os.chdir('temp_data')
 
     # read the header and get freqeuncy information
+    print('prthd in=' + obs_par['target'] + '.' + obs_par['freq'] + ' > header.log')
     os.system('prthd in=' + obs_par['target'] + '.' + obs_par['freq'] + ' > header.log')
 
     head_file = open('header.log', 'rt')
@@ -20,7 +21,7 @@ def contsub_uvlin(args,obs_par):
     for line in head_file:
         lines.append(line)
 
-    os.system('rm -rf header.log')
+    #os.system('rm -rf header.log')
     header = lines[14][0:-4]
     header = header.split(' ')
     freq_set = []

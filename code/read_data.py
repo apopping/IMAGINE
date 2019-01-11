@@ -51,8 +51,26 @@ def read_data(args, obs_par):
     # get list of files
     files = os.listdir()
     freq = files[0][-4:]
+    # depending in miriad installation and os, freq has 4 or 6 characters
+    if float(freq) < 1000:
+        freq = files[0][-6:]
+
+
+    #freq = None
+    #for file in files:
+    #    if obs_par['target'] in file:
+    #        freq = file.strip(obs_par['target'] + '.')
+    #    elif '1934-638' in file:
+    #        freq = file.strip('1934-638.')
+    #    elif '0823-500' in file:
+    #        freq = file.strip('0823-500.')
+
+    print('freq', freq)
+
+
 
     obs_par['freq'] = freq
+    print(obs_par)
 
     # read the number of channels:
     command = 'prthd in=' + files[0] + '> header.log'
@@ -104,4 +122,4 @@ def read_data(args, obs_par):
         os.system('mv ' + file + '.aver ' + file)
 
 
-    return
+    return obs_par

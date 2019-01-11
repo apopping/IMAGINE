@@ -23,6 +23,7 @@ import quality_control as qc
 import image_data as image
 from read_observation_parameters import read_observation_parameters
 from read_data import read_data
+from rename_data import rename_data
 from flag_data import flag_data
 from cal_data import cal_data
 from contsub_uvlin import contsub_uvlin
@@ -168,9 +169,12 @@ print(args.datadir)
 print(obs_par)
 
 #  Import the raw data
-read_data(args,obs_par)
+obs_par = read_data(args,obs_par)
 print('Data has been imported')
+print(obs_par)
 
+#  Correct filenames is needed for (known) exceptional cases
+rename_data(args,obs_par)
 
 
 #  Do the basic flagging
@@ -180,6 +184,7 @@ print('Data has been flagged')
 #  Do the calibration
 cal_data(args, obs_par)
 print('Data has been calibrated')
+print(obs_par)
 
 #  Make plots of the calibration tabble
 qc.plot_cal('bpass_table')

@@ -37,8 +37,13 @@ def contsub_imlin(args,obs_par):
     mw_vmin = -200
     mw_vmax = 200
 
+    print('crval', crval)
+    print('cdelt', cdelt)
+    print(line_vmin)
+    print(line_vmax)
+
     # check whether the MW is in the data:
-    if crval < mw_vmin:
+    if crval < mw_vmin and line_vmin > mw_vmax:
         chan1 = 1
         chan2 = int((mw_vmin-crval)/cdelt)
         chan3 = int((mw_vmax-crval)/cdelt)
@@ -47,6 +52,15 @@ def contsub_imlin(args,obs_par):
         chan6 = args.nchan
         cont_chan = '(' + str(chan1) + ',' + str(chan2) + '),(' + str(chan3) + ',' + str(chan4) \
                     + '),(' + str(chan5) + ',' + str(chan6) + ')'
+
+    if crval < mw_vmin and line_vmin < mw_vmax:
+        chan1 = 1
+        chan2 = int((mw_vmin-crval)/cdelt)
+        chan3 = int((line_vmax-crval)/cdelt)
+        chan4 = args.nchan
+        cont_chan = '(' + str(chan1) + ',' + str(chan2) + '),(' + str(chan3) + ',' + str(chan4) + ')'
+
+
     elif crval > mw_vmin and crval < mw_vmax:
         chan1 = int((mw_vmax-crval)/cdelt)
         chan2 = int((line_vmin-crval)/cdelt)
