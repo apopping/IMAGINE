@@ -52,7 +52,7 @@ parser.add_argument("-dd", "--datadir",
                     default='/Users/attila/work/imagine/rawdata/',
                     help="the directory where the raw observations are stored")
 
-parser.add_argument("--od", "--outdir",
+parser.add_argument("-od", "--outdir",
                     dest="outdir",
                     default='/Users/attila/work/imagine/processed/',
                     help="the directory where the data is being processed")
