@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1ddf2830-c0f9-4645-bae0-6b6bf52ca33f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/code/clean_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/clean_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/imagineV1.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/code/imagineV1.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/imagineV1.sqlite-journal" beforeDir="false" afterPath="$PROJECT_DIR$/code/imagineV1.sqlite-journal" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +45,7 @@
         <counts>
           <entry key="Python Console" value="1728" />
           <entry key="md" value="286" />
-          <entry key="py" value="17872" />
+          <entry key="py" value="17876" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
@@ -51,7 +53,7 @@
         <counts>
           <entry key="Markdown" value="286" />
           <entry key="PLAIN_TEXT" value="284" />
-          <entry key="Python" value="19600" />
+          <entry key="Python" value="19604" />
         </counts>
       </usages-collector>
     </session>
@@ -158,10 +160,10 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/code/clean_data.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="282">
-                      <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+                    <state relative-caret-position="113">
+                      <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
                       <folding>
-                        <marker date="1547444885023" expanded="true" signature="182:1134" ph="..." />
+                        <marker date="1547445685702" expanded="true" signature="182:1135" ph="..." />
                       </folding>
                     </state>
                   </provider>
@@ -655,10 +657,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/clean_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        <state relative-caret-position="113">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
           <folding>
-            <marker date="1547444885023" expanded="true" signature="182:1134" ph="..." />
+            <marker date="1547445685702" expanded="true" signature="182:1135" ph="..." />
           </folding>
         </state>
       </provider>

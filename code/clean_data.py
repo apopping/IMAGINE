@@ -31,7 +31,7 @@ def basic_clean(args,obs_par):
     os.system('mossdi map=' + map +
               ' beam=' + beam +
               ' out=' + model +
-              ' niters=500 gain=0.1' +
+              ' niters=1000 gain=0.1' +
               ' region="mask(' + mask + ')"')
 
     os.system('restor map=' + map +
@@ -52,7 +52,7 @@ def basic_clean(args,obs_par):
         os.system('mossdi map=' + cmap +
                   ' beam=' + cbeam +
                   ' out=' + cmodel +
-                  ' niters=500 gain=0.1')
+                  ' niters=1000 gain=0.1')
 
         os.system('restor map=' + cmap +
                   ' beam=' + cbeam +
