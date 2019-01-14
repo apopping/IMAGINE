@@ -17,14 +17,22 @@ def basic_clean(args,obs_par):
     map = obs_par['target'] + '.map'
     beam = obs_par['target'] + '.beam'
     model = obs_par['target'] + '.model'
+    mask = obs_par['target'] + '.mask'
     clean1 = obs_par['target'] + '.clean'
+
+    os.system('maths exp=' + map +
+              ' mask="abs(' + map + ').gt.0.00001"' +
+              ' out=' + mask)
+
+
 
 
     # the data has been inverted from vis to image in a previous step, start with the deconvolution
     os.system('mossdi map=' + map +
               ' beam=' + beam +
               ' out=' + model +
-              ' niters=500 gain=0.1')
+              ' niters=500 gain=0.1' +
+              ' region="mask(' + mask + ')"')
 
     os.system('restor map=' + map +
               ' beam=' + beam +
