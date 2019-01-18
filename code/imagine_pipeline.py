@@ -30,7 +30,7 @@ from contsub_uvlin import contsub_uvlin
 from clean_data import basic_clean
 from contsub_imlin import contsub_imlin
 from make_moment import make_moment
-
+from make_log import make_log
 
 # Define the input parameters
 
@@ -155,7 +155,7 @@ if args.mode != 'line' and args.mode != 'cont':
 # path on my local machine
 database = '/Users/attila/work/imagine/IMAGINE/code/imagineV1.sqlite'
 # path on ICRAR system
-database = '/home/apopping/imagine/IMAGINE/code/imagineV1.sqlite'
+#database = '/home/apopping/imagine/IMAGINE/code/imagineV1.sqlite'
 obs_par = read_observation_parameters(args,database)
 
 # manual edit during development
@@ -187,8 +187,8 @@ print('Data has been calibrated')
 print(obs_par)
 
 #  Make plots of the calibration tabble
-qc.plot_cal('bpass_table')
-qc.plot_cal('phase_table')
+qc.plot_bpass('bpass_table')
+qc.plot_phase('phase_table')
 
 #  Do the continuum subtraction (uvlin)
 if args.mode == 'line':
@@ -234,6 +234,10 @@ if args.mode == 'line':
 qc.plot_uv(args, obs_par)
 qc.plot_maps(args, obs_par)
 
+#make_log(args, obs_par)
+# combine all the files in output file
+os.system('pdfjoin *mom*.pdf *bpass_table*.pdf *phase_table*.pdf *time*.pdf')
+os.system('mv *joined*.pdf log_plots.pdf')
 
 
 
