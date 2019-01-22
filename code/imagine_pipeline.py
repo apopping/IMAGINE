@@ -154,7 +154,9 @@ if args.mode != 'line' and args.mode != 'cont':
 # read the relevant observing parameters
 #database = '/Users/attila/work/imagine/IMAGINE/code/imagineV1.sqlite'
 #database = '/home/apopping/imagine/IMAGINE/code/imagineV1.sqlite'
-database = 'imagineV1.sqlite'
+code_dir = os.popen('pwd').read()
+code_dir = code_dir[:-1].strip('code')
+database = code_dir + '/' + 'imagineV1.sqlite'
 
 obs_par = read_observation_parameters(args,database)
 
@@ -164,6 +166,8 @@ obs_par = read_observation_parameters(args,database)
 # convert the files into a list
 obs_par['files'] = obs_par['files'].replace(' ','')
 obs_par['files'] = obs_par['files'].split(',')
+obs_par['code_dir'] = code_dir
+
 
 print(args.datadir)
 print(obs_par)

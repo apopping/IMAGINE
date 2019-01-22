@@ -57,7 +57,7 @@ def plot_uv(args, obs_par):
 
     os.system('uvstat vis=' + vis +
               ' select="' + antset + '"' +
-              ' stokes=ii average=5 axes=time,rms'  +
+              ' stokes=ii axes=time,rms'  +
               ' device=' + time_rms_device)
 
     cmd = 'ps2pdf ' + obs_par['target'] + '_time_amp.ps ' + obs_par['target'] + '_time_amp.pdf'
@@ -76,8 +76,8 @@ def plot_maps(args, obs_par):
 
     #check whether optical image exists:
     fitsfile = '/Users/attila/work/imagine/IMAGINE/optical/' + obs_par['target'] + '_dss_blue.fits'
-    #fitsfile = '/home/apopping/imagine/IMAGINE/optical/' + obs_par['target'] + '_dss_blue.fits'
-    fitsfile = '../optical/' + obs_par['target'] + '_dss_blue.fits'
+    fitsfile = '/home/apopping/imagine/IMAGINE/optical/' + obs_par['target'] + '_dss_blue.fits'
+    fitsfile = obs_par['code_dir'] + '/optical/' + obs_par['target'] + '_dss_blue.fits'
 
     if os.path.isfile(fitsfile):
         mirfile = args.outdir + obs_par['target'] + '/' + obs_par['configuration'] + '/temp_data/dss_blue.mir'
