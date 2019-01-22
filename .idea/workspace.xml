@@ -44,7 +44,7 @@
         <counts>
           <entry key="Python Console" value="1870" />
           <entry key="md" value="286" />
-          <entry key="py" value="20116" />
+          <entry key="py" value="20117" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
@@ -52,7 +52,7 @@
         <counts>
           <entry key="Markdown" value="286" />
           <entry key="PLAIN_TEXT" value="284" />
-          <entry key="Python" value="21986" />
+          <entry key="Python" value="21987" />
         </counts>
       </usages-collector>
     </session>
@@ -187,8 +187,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/code/flag_data.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="380">
-                      <caret line="27" column="73" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+                    <state relative-caret-position="365">
+                      <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
                     </state>
                   </provider>
                 </entry>
@@ -631,8 +631,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/flag_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="27" column="73" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+        <state relative-caret-position="365">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
         </state>
       </provider>
     </entry>
