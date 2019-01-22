@@ -25,7 +25,7 @@ def flag_data(file):
     os.system('uvflag vis=' + file + ' edge=20 flagval=flag')
     os.system('uvflag vis=' + file + ' select="shadow(25)" flagval=flag')
     os.system('tvclip vis=' + file + ' clip=20 options=notv commands=diff,clip')
-    os.system('pgflag vis=' + file + ' stokes=ii command="<be" flagpar="7,5,3,3,5,3,20" options=nodisp')
+    os.system('pgflag vis=' + file + ' stokes=ii command="<be" flagpar="5,5,3,3,5,3,20" options=nodisp')
 
 
 
