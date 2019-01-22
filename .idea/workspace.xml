@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ddf2830-c0f9-4645-bae0-6b6bf52ca33f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/imagine_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/imagine_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/quality_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/quality_control.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,8 +77,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="317">
-                  <caret line="241" column="136" selection-start-line="241" selection-start-column="136" selection-end-line="241" selection-end-column="136" />
+                <state relative-caret-position="547">
+                  <caret line="157" column="65" lean-forward="true" selection-start-line="157" selection-start-column="65" selection-end-line="157" selection-end-column="65" />
                   <folding>
                     <element signature="e#507#522#0" expanded="true" />
                   </folding>
@@ -612,8 +610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="241" column="136" selection-start-line="241" selection-start-column="136" selection-end-line="241" selection-end-column="136" />
+        <state relative-caret-position="547">
+          <caret line="157" column="65" lean-forward="true" selection-start-line="157" selection-start-column="65" selection-end-line="157" selection-end-column="65" />
           <folding>
             <element signature="e#507#522#0" expanded="true" />
           </folding>
