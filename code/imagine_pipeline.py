@@ -157,6 +157,7 @@ if args.mode != 'line' and args.mode != 'cont':
 code_dir = os.popen('pwd').read()
 code_dir = code_dir[:-1].strip('code')
 database = code_dir + '/' + 'imagineV1.sqlite'
+print(database)
 
 obs_par = read_observation_parameters(args,database)
 
