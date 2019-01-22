@@ -236,10 +236,7 @@ qc.plot_maps(args, obs_par)
 
 #make_log(args, obs_par)
 # combine all the files in output file
-os.system('pdfjoin *mom*.pdf *bpass_table*.pdf *phase_table*.pdf *time*.pdf')
-os.system('mv *joined*.pdf log_plots.pdf')
-
-
+os.system('gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=log_plots.pdf *mom*.pdf *bpass_table*.pdf *phase_table*.pdf *time*.pdf')
 
 
 

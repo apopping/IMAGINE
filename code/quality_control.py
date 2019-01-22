@@ -76,6 +76,8 @@ def plot_maps(args, obs_par):
 
     #check whether optical image exists:
     fitsfile = '/Users/attila/work/imagine/IMAGINE/optical/' + obs_par['target'] + '_dss_blue.fits'
+    fitsfile = '/home/apopping/imagine/IMAGINE/optical/' + obs_par['target'] + '_dss_blue.fits'
+
     if os.path.isfile(fitsfile):
         mirfile = args.outdir + obs_par['target'] + '/' + obs_par['configuration'] + '/temp_data/dss_blue.mir'
         os.system('fits in=' + fitsfile + ' out=' + mirfile + ' op=xyin')
