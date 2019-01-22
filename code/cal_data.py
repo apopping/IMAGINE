@@ -21,21 +21,20 @@ def cal_data(args, obs_par):
 
 
 
-    if os.path.exists('1934-638.' + obs_par['freq']):
-        if os.path.exists('0823-500.' +  obs_par['freq']):
-            #  they both exist, check which to use
-            size1934 = os.popen('du -s 1934-638*').read()
-            size1934 = float(size1934.split()[0])
-            size0823 = os.popen('du -s 0823-500*').read()
-            size0823 = float(size0823.split()[0])
-            if size1934 > size0823:
-                os.system('cp -r 1934-638.' + obs_par['freq'] + ' bpass_table')
-            else:
-                os.system('cp -r 0823-500.' + obs_par['freq'] + ' bpass_table')
-
-        else:
+    if os.path.exists('1934-638.' + obs_par['freq']) and os.path.exists('0823-500.' +  obs_par['freq']):
+        #  they both exist, check which to use
+        size1934 = os.popen('du -s 1934-638*').read()
+        size1934 = float(size1934.split()[0])
+        size0823 = os.popen('du -s 0823-500*').read()
+        size0823 = float(size0823.split()[0])
+        if size1934 > size0823:
             os.system('cp -r 1934-638.' + obs_par['freq'] + ' bpass_table')
-    elif os.path.exists('0823-500' + obs_par['freq']):
+        else:
+            os.system('cp -r 0823-500.' + obs_par['freq'] + ' bpass_table')
+
+    elif os.path.exists('1934-638.' + obs_par['freq']) and not os.path.exists('0823-500.' + obs_par['freq']):
+        os.system('cp -r 1934-638.' + obs_par['freq'] + ' bpass_table')
+    elif not os.path.exists('1934-638.' + obs_par['freq']) and  os.path.exists('0823-500.' + obs_par['freq']):
         os.system('cp -r 0823-500.' + obs_par['freq'] + ' bpass_table')
     else:
         print('ERROR: there is no calibrator !!')

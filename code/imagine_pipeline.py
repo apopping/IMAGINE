@@ -152,10 +152,10 @@ if args.mode != 'line' and args.mode != 'cont':
     exit()
 
 # read the relevant observing parameters
-# path on my local machine
-database = '/Users/attila/work/imagine/IMAGINE/code/imagineV1.sqlite'
-# path on ICRAR system
-database = '/home/apopping/imagine/IMAGINE/code/imagineV1.sqlite'
+#database = '/Users/attila/work/imagine/IMAGINE/code/imagineV1.sqlite'
+#database = '/home/apopping/imagine/IMAGINE/code/imagineV1.sqlite'
+database = 'imagineV1.sqlite'
+
 obs_par = read_observation_parameters(args,database)
 
 # manual edit during development
@@ -177,9 +177,17 @@ print(obs_par)
 rename_data(args,obs_par)
 
 
-#  Do the basic flagging
-flag_data(args, obs_par)
-print('Data has been flagged')
+#  Do the basic flagging of calibrators
+#flag_data(args, obs_par)
+
+if os.path.isdir('1934-638.' + obs_par['freq']):
+    flag_data('1934-638.' + obs_par['freq'])
+if os.path.isdir('0823-500.' + obs_par['freq']):
+    flag_data('0823-500.' + obs_par['freq'])
+flag_data(obs_par['phase_cal'] + '.' + obs_par['freq'])
+
+
+print('Calibrators have been flagged been flagged')
 
 #  Do the calibration
 cal_data(args, obs_par)
@@ -189,6 +197,9 @@ print(obs_par)
 #  Make plots of the calibration tabble
 qc.plot_bpass('bpass_table')
 qc.plot_phase('phase_table')
+
+# flag the target data
+flag_data(obs_par['target'] + '.' + obs_par['freq'])
 
 #  Do the continuum subtraction (uvlin)
 if args.mode == 'line':
