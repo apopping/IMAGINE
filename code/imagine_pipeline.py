@@ -123,7 +123,7 @@ args = parser.parse_args()
 
 helpstring = " 'python imagine_pipeline.py --help' "
 
-if args.id is None:
+if args.id not None:
     Id = args.id
     print(f"start working on observation: {Id}")
 else:
