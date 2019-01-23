@@ -14,6 +14,8 @@ def rename_data(args, obs_par):
     files = os.listdir()
 
     if obs_par['target'] == 'ngc7793':
+        if os.path.isdir('pnt.2100'):
+            os.system('mv pnt.2100 ngc7793.2100')
         if os.path.isdir('pnt.1419.2'):
             os.system('mv pnt.1419.2 ngc7793.1419.2')
             obs_par['freq'] = '1419.2'
@@ -22,6 +24,8 @@ def rename_data(args, obs_par):
             obs_par['freq'] = '1419.2'
 
     if obs_par['target'] == 'ngc1744':
+        if os.path.isdir('pnt.2100'):
+            os.system('mv pnt.2100 ngc1744.2100')
         if os.path.isdir('pnt.1419.2'):
             os.system('mv pnt.1419.2 ngc1744.1416.7')
             obs_par['freq'] = '1416.7'

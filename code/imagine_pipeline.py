@@ -225,8 +225,12 @@ qc.plot_uv(args, obs_par)
 qc.plot_maps(args, obs_par)
 
 # combine all the files in output file
-os.system('gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=log_plots.pdf '
-          '*mom*.pdf *bpass_table*.pdf *phase_table*.pdf *time*.pdf')
+if args.mode == 'line':
+    os.system('gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=log_plots.pdf '
+              '*mom*.pdf *bpass_table*.pdf *phase_table*.pdf *time*.pdf')
+if args.mode == 'cont':
+    os.system('gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=log_plots.pdf '
+              '*bpass_table*.pdf *phase_table*.pdf *time*.pdf')
 
 # move the data to its final location:
 os.chdir(args.outdir + obs_par['target'] + '/' + obs_par['configuration'])
