@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ddf2830-c0f9-4645-bae0-6b6bf52ca33f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/code/imagine_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/imagine_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/quality_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/quality_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/rename_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/rename_data.py" afterDir="false" />
-    </list>
+    <list default="true" id="1ddf2830-c0f9-4645-bae0-6b6bf52ca33f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +26,7 @@
         <counts>
           <entry key="ipynb" value="1" />
           <entry key="md" value="1" />
-          <entry key="py" value="59" />
+          <entry key="py" value="60" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -39,14 +35,14 @@
           <entry key="IPNB" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="59" />
+          <entry key="Python" value="60" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="1885" />
           <entry key="md" value="286" />
-          <entry key="py" value="20506" />
+          <entry key="py" value="20511" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
@@ -54,7 +50,7 @@
         <counts>
           <entry key="Markdown" value="286" />
           <entry key="PLAIN_TEXT" value="284" />
-          <entry key="Python" value="22391" />
+          <entry key="Python" value="22396" />
         </counts>
       </usages-collector>
     </session>
@@ -79,11 +75,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="627">
-                  <caret line="245" column="23" lean-forward="true" selection-start-line="245" selection-start-column="23" selection-end-line="245" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#24#39#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="195">
+                  <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -149,6 +142,15 @@
                   </provider>
                 </entry>
               </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/code/image_data.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="444">
+                      <caret line="81" selection-start-line="81" selection-end-line="81" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/code/contsub_uvlin.py">
                   <provider selected="true" editor-type-id="text-editor">
@@ -161,11 +163,11 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/code/quality_control.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="319">
-                      <caret line="105" column="59" selection-start-line="105" selection-start-column="59" selection-end-line="105" selection-end-column="59" />
+                    <state relative-caret-position="124">
+                      <caret line="92" column="20" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
                       <folding>
                         <element signature="e#92#101#0" expanded="true" />
                         <marker date="1548224841302" expanded="true" signature="163:404" ph="..." />
@@ -264,9 +266,9 @@
         <option value="$PROJECT_DIR$/code/contsub_uvlin.py" />
         <option value="$PROJECT_DIR$/code/cal_data.py" />
         <option value="$PROJECT_DIR$/code/flag_data.py" />
-        <option value="$PROJECT_DIR$/code/imagine_pipeline.py" />
         <option value="$PROJECT_DIR$/code/rename_data.py" />
         <option value="$PROJECT_DIR$/code/quality_control.py" />
+        <option value="$PROJECT_DIR$/code/imagine_pipeline.py" />
       </list>
     </option>
   </component>
@@ -286,6 +288,11 @@
             <path>
               <item name="IMAGINE" type="b2602c69:ProjectViewProjectNode" />
               <item name="IMAGINE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IMAGINE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IMAGINE" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -389,7 +396,7 @@
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1551792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1551792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -400,7 +407,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32981133" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.38394162" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.38394162" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32919708" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -530,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/image_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/clean_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -614,20 +614,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="245" column="23" lean-forward="true" selection-start-line="245" selection-start-column="23" selection-end-line="245" selection-end-column="23" />
-          <folding>
-            <element signature="e#24#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/quality_control.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="105" column="59" selection-start-line="105" selection-start-column="59" selection-end-line="105" selection-end-column="59" />
+        <state relative-caret-position="124">
+          <caret line="92" column="20" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
           <folding>
             <element signature="e#92#101#0" expanded="true" />
             <marker date="1548224841302" expanded="true" signature="163:404" ph="..." />
@@ -635,6 +625,20 @@
             <marker date="1548224841302" expanded="true" signature="2260:2265" ph="..." />
             <marker date="1548224841302" expanded="true" signature="2260:4680" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/image_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
         </state>
       </provider>
     </entry>
