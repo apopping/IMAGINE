@@ -1,6 +1,21 @@
 #!/usr/bin/env python
 
-file_description ='''
+
+import argparse
+import os
+import quality_control as qc
+import image_data as image
+from read_observation_parameters import read_observation_parameters
+from read_data import read_data
+from rename_data import rename_data
+from flag_data import flag_data
+from cal_data import cal_data
+from contsub_uvlin import contsub_uvlin
+from clean_data import basic_clean
+from contsub_imlin import contsub_imlin
+from make_moment import make_moment
+
+file_description = '''
 This is the main pipeline to reduce ATCA data,
 in particular data from the IMAGINE survey:
 Imaging Galaxies Intergalactic and Nearby Environment
@@ -17,29 +32,12 @@ see
 for more information
 '''
 
-import argparse
-import os
-import quality_control as qc
-import image_data as image
-from read_observation_parameters import read_observation_parameters
-from read_data import read_data
-from rename_data import rename_data
-from flag_data import flag_data
-from cal_data import cal_data
-from contsub_uvlin import contsub_uvlin
-from clean_data import basic_clean
-from contsub_imlin import contsub_imlin
-from make_moment import make_moment
-from make_log import make_log
 
 # Define the input parameters
 
 parser = argparse.ArgumentParser(description=file_description,
-                                 usage = "imagine_pipeline.py",
-                                 epilog = "last edited 2018")
-
-# argument: files to process
-
+                                 usage="imagine_pipeline.py",
+                                 epilog="last edited 2018")
 
 parser.add_argument("-i", "--id",
                     dest="id",
@@ -85,9 +83,9 @@ parser.add_argument("-av", "--average",
                     help="number of spectral channels to average")
 
 parser.add_argument("-m", "--mode",
-                   dest="mode",
-                   default='line',
-                   help="observing mode: spectral line (line) or continuum (cont)")
+                    dest="mode",
+                    default='line',
+                    help="observing mode: spectral line (line) or continuum (cont)")
 
 parser.add_argument("-ant", "--ant",
                     dest="ant",
@@ -121,21 +119,13 @@ parser.add_argument("-r", "--robust",
                     default=1,
                     help="robust values used for image weighting")
 
-
-
-
-
 args = parser.parse_args()
-#observation = args.obs
-#print(observation)
 
 helpstring = " 'python imagine_pipeline.py --help' "
 
-
-
-if args.id != None:
-    id = args.id
-    print(f"start working on observation: {id}")
+if args.id is None:
+    Id = args.id
+    print(f"start working on observation: {Id}")
 else:
     print('No observation ID is given, extracting info from user input')
     # check whether input is given
@@ -152,20 +142,14 @@ if args.mode != 'line' and args.mode != 'cont':
     exit()
 
 # read the relevant observing parameters
-#database = '/Users/attila/work/imagine/IMAGINE/code/imagineV1.sqlite'
-#database = '/home/apopping/imagine/IMAGINE/code/imagineV1.sqlite'
 code_dir = os.popen('pwd').read()
 code_dir = code_dir[:-1].strip('code')
 database = code_dir + '/' + 'imagineV1.sqlite'
 print(database)
 
-obs_par = read_observation_parameters(args,database)
-
-# manual edit during development
-#obs_par['files'] = '2018-09-28_0532.C3157, 2018-09-28_0608.C3157'
-
+obs_par = read_observation_parameters(args, database)
 # convert the files into a list
-obs_par['files'] = obs_par['files'].replace(' ','')
+obs_par['files'] = obs_par['files'].replace(' ', '')
 obs_par['files'] = obs_par['files'].split(',')
 obs_par['code_dir'] = code_dir
 
@@ -174,17 +158,15 @@ print(args.datadir)
 print(obs_par)
 
 #  Import the raw data
-obs_par = read_data(args,obs_par)
+obs_par = read_data(args, obs_par)
 print('Data has been imported')
 print(obs_par)
 
 #  Correct filenames is needed for (known) exceptional cases
-rename_data(args,obs_par)
+rename_data(args, obs_par)
 
 
 #  Do the basic flagging of calibrators
-#flag_data(args, obs_par)
-
 if os.path.isdir('1934-638.' + obs_par['freq']):
     flag_data('1934-638.' + obs_par['freq'])
 if os.path.isdir('0823-500.' + obs_par['freq']):
@@ -213,55 +195,44 @@ if args.mode == 'line':
 # do the imaging:
 if args.mode == 'line':
     print('Start inverting spectral line data')
-    image.invert_spectral_line(args,obs_par)
+    image.invert_spectral_line(args, obs_par)
     print(f"created dirty cube and psf for {obs_par['target']}")
 
     print('Make a narrowband continuum image based on the spectral line data')
     image.invert_continuum(args, obs_par)
     print(f"created narrowband continuuum dirty map and psf for {obs_par['target']}")
 
-
-
 if args.mode == 'cont':
     print('Start inverting spectral line data')
-    image.invert_continuum(args,obs_par)
+    image.invert_continuum(args, obs_par)
     print(f"created dirty image and psf for {obs_par['target']}")
 
-
-
 # do a basic clean
-basic_clean(args,obs_par)
+basic_clean(args, obs_par)
 print(f"finished cleaning of {obs_par['target']}")
-
 
 # do the image based continuum subtractio (imlin)
 if args.mode == 'line':
     print('start image based continuum subtraction')
     contsub_imlin(args, obs_par)
 
-
-
 # make moment maps of the line data
 if args.mode == 'line':
     make_moment(args, obs_par)
-
 
 # generate more control plots
 qc.plot_uv(args, obs_par)
 qc.plot_maps(args, obs_par)
 
-#make_log(args, obs_par)
 # combine all the files in output file
-os.system('gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=log_plots.pdf *mom*.pdf *bpass_table*.pdf *phase_table*.pdf *time*.pdf')
-
-
-
+os.system('gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=log_plots.pdf '
+          '*mom*.pdf *bpass_table*.pdf *phase_table*.pdf *time*.pdf')
 
 # move the data to its final location:
 os.chdir(args.outdir + obs_par['target'] + '/' + obs_par['configuration'])
 
 if args.mode == 'line':
-    files = os.listdir()
+    files = os.listdir('.')
     nruns = [0]
     for file in files:
         if file[0:8] == 'line_run':
@@ -270,11 +241,10 @@ if args.mode == 'line':
     os.system('mv temp_data line_run' + str(run))
 
 if args.mode == 'cont':
-    files = os.listdir()
+    files = os.listdir('.')
     nruns = [0]
     for file in files:
         if file[0:8] == 'cont_run':
             nruns.append(int(file[8]))
     run = max(nruns) + 1
     os.system('mv temp_data cont_run' + str(run))
-

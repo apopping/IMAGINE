@@ -6,7 +6,9 @@ This script will check whether data exists and import it to be further processed
 
 import os
 
+
 def read_data(args, obs_par):
+    cmd = None
     # create the work directory in case it does not exist:
     if not os.path.isdir(args.outdir):
         os.system('mkdir ' + args.outdir)
@@ -26,56 +28,40 @@ def read_data(args, obs_par):
         else:
             # make a softlink to the workdirectory
             os.system('mkdir temp_links')
-            command = 'ln -s ' + file_path + ' temp_links/' + file.strip('\n')
-            print(command)
-            os.system(command)
+            cmd = 'ln -s ' + file_path + ' temp_links/' + file.strip('\n')
+            print(cmd)
+            os.system(cmd)
 
     os.system('mkdir temp_data')
     print('mode:', args.mode)
     if args.mode == 'line':
-        command = 'atlod in=temp_links/* out=temp_data/data  ifsel=' + str(obs_par['line_if']) + ' restfreq=1.420405752 options=bary,birdie,rfiflag,noauto edge=0'
+        cmd = 'atlod in=temp_links/* out=temp_data/data  ifsel=' + str(obs_par['line_if']) + \
+              ' restfreq=1.420405752 options=bary,birdie,rfiflag,noauto edge=0'
     if args.mode == 'cont':
-        command = 'atlod in=temp_links/* out=temp_data/data  ifsel=' + str(obs_par['cont_if']) + ' restfreq=1.420405752 options=bary,birdie,rfiflag,noauto edge=0'
+        cmd = 'atlod in=temp_links/* out=temp_data/data  ifsel=' + str(obs_par['cont_if']) + \
+              ' restfreq=1.420405752 options=bary,birdie,rfiflag,noauto edge=0'
 
-
-
-    os.system(command)
+    os.system(cmd)
     os.system('uvindex vis=temp_data/data log=uvindex.log')
     os.chdir('temp_data')
     os.system('uvsplit vis=data options=mosaic')
     os.system('rm -rf data')
     os.system('rm -rf ../temp_links')
 
-    # average data,
-
     # get list of files
-    files = os.listdir()
+    files = os.listdir('.')
     freq = files[0][-4:]
     # depending in miriad installation and os, freq has 4 or 6 characters
     if float(freq) < 1000:
         freq = files[0][-6:]
 
-
-    #freq = None
-    #for file in files:
-    #    if obs_par['target'] in file:
-    #        freq = file.strip(obs_par['target'] + '.')
-    #    elif '1934-638' in file:
-    #        freq = file.strip('1934-638.')
-    #    elif '0823-500' in file:
-    #        freq = file.strip('0823-500.')
-
-    print('freq', freq)
-
-
-
     obs_par['freq'] = freq
     print(obs_par)
 
     # read the number of channels:
-    command = 'prthd in=' + files[0] + '> header.log'
-    os.system(command)
-    head_file = open('header.log','rt')
+    cmd = 'prthd in=' + files[0] + '> header.log'
+    os.system(cmd)
+    head_file = open('header.log', 'rt')
     lines = []
     for line in head_file:
         print(f'lines : {line}')
@@ -98,28 +84,15 @@ def read_data(args, obs_par):
     print(f'chan_1 {chan_1}')
     print(f'increment {increment}')
 
-
-    # Average the input data
-    #if chans > 2048:
-    #    out_chan = int(chans/24)
-    #    line_set = 'channel,' + str(out_chan) + ',1,24,24'
-    #else:
-    #    out_chan = chans
-    #    line_set = 'channel,' + str(out_chan) + ',1,1,1'
     out_chan = int(chans/args.aver)
     line_set = 'channel,' + str(out_chan) + ',1,' + str(args.aver) + ',' + str(args.aver)
-
-
 
     for file in files:
         print(f"averaging : {file}")
         print('uvaver vis=' + file + ' line=' + line_set + ' out=' + file + '.aver ')
         os.system('uvaver vis=' + file + ' line=' + line_set + ' out=' + file + '.aver ')
         # rename the averaged file to the original
-        #command = 'cp -r ' + file + '.aver ' + file
-        #print(command)
         os.system('rm -rf ' + file)
         os.system('mv ' + file + '.aver ' + file)
-
 
     return obs_par

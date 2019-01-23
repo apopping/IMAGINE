@@ -8,6 +8,7 @@ import os
 import os.path
 import subprocess
 
+
 def plot_bpass(cal_table):
     os.system('gpplt vis=' + cal_table + ' yaxis=amp nxy="3,2" options=bandpass device=' + cal_table + '_amp.ps/cps')
     os.system('gpplt vis=' + cal_table + ' yaxis=phase nxy="3,2" options=bandpass device=' + cal_table + '_phase.ps/cps')
@@ -28,9 +29,7 @@ def plot_phase(cal_table):
     cmd = 'ps2pdf ' + cal_table + '_phase.ps ' + cal_table +  '_phase.pdf'
     subprocess.call(cmd, shell=True)
 
-
     return
-
 
 
 def plot_uv(args, obs_par):
@@ -64,8 +63,6 @@ def plot_uv(args, obs_par):
     subprocess.call(cmd, shell=True)
     cmd = 'ps2pdf ' + obs_par['target'] + '_time_rms.ps ' + obs_par['target'] + '_time_rms.pdf'
     subprocess.call(cmd, shell=True)
-
-
 
     return
 

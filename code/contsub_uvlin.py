@@ -7,7 +7,8 @@ This script does continuum subtraction in the uv domain, using uvlin
 import os
 
 
-def contsub_uvlin(args,obs_par):
+def contsub_uvlin(args, obs_par):
+    cmd = None
     # go to the working directory
     os.chdir(args.outdir + obs_par['target'] + '/' + obs_par['configuration'])
     os.chdir('temp_data')
@@ -21,7 +22,6 @@ def contsub_uvlin(args,obs_par):
     for line in head_file:
         lines.append(line)
 
-    #os.system('rm -rf header.log')
     header = lines[14][0:-4]
     header = header.split(' ')
     freq_set = []
@@ -54,8 +54,8 @@ def contsub_uvlin(args,obs_par):
         chan4 = int((line_fmin - chan_1) / increment)
         chan5 = int((line_fmax - chan_1) / increment)
         chan6 = chans
-        cont_chan = str(chan1) + ',' + str(chan2) + ',' + str(chan3) + ',' + str(chan4) \
-                    + ',' + str(chan5) + ',' + str(chan6)
+        cont_chan = str(chan1) + ',' + str(chan2) + ',' + str(chan3) + ',' + str(chan4) + \
+                    ',' + str(chan5) + ',' + str(chan6)
     elif chan_1 < mw_fmin and chan_1 > mw_fmax:
         chan1 = (mw_fmax - chan_1) / increment
         chan2 = int((line_fmin - chan_1) / increment)
@@ -70,14 +70,14 @@ def contsub_uvlin(args,obs_par):
         cont_chan = str(chan1) + ',' + str(chan2) + ',' + str(chan3) + ',' + str(chan4)
 
     # make continuum subtracted line data
-    command = 'uvlin vis=' + obs_par['target'] + '.' + obs_par['freq'] + ' out=' + obs_par['target'] + '.uvlin  mode=line chans=' + cont_chan
-    os.system(command)
+    cmd = 'uvlin vis=' + obs_par['target'] + '.' + obs_par['freq'] + \
+              ' out=' + obs_par['target'] + '.uvlin  mode=line chans=' + cont_chan
+    os.system(cmd)
 
     # make also store the continuuum data in an averaged channel
-    command = 'uvlin vis=' + obs_par['target'] + '.' + obs_par['freq'] + ' out=' + obs_par['target'] + '.uvcon  mode=continuum chans=' + cont_chan
-    os.system(command)
-
-
+    cmd = 'uvlin vis=' + obs_par['target'] + '.' + obs_par['freq'] + \
+              ' out=' + obs_par['target'] + '.uvcon  mode=continuum chans=' + cont_chan
+    os.system(cmd)
 
     return
 

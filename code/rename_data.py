@@ -6,6 +6,7 @@ This script will flag the data
 
 import os
 
+
 def rename_data(args, obs_par):
     # go to the working directory
     os.chdir(args.outdir + obs_par['target'] + '/' + obs_par['configuration'])

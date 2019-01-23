@@ -11,15 +11,6 @@ def cal_data(args, obs_par):
     # go to the working directory
     os.chdir(args.outdir + obs_par['target'] + '/' + obs_par['configuration'])
     os.chdir('temp_data')
-    #files = os.listdir()
-    #freq = files[0][-4:]
-
-    #for file in files:
-    #    if obs_par['target'] in file:
-    #        freq = file.strip(obs_par['target'] + '.')
-    #        print(freq)
-
-
 
     if os.path.exists('1934-638.' + obs_par['freq']) and os.path.exists('0823-500.' +  obs_par['freq']):
         #  they both exist, check which to use
@@ -54,6 +45,5 @@ def cal_data(args, obs_par):
     os.system('gpcal vis=phase_table interval=0.1 options=xyvary')
     os.system('gpboot vis=phase_table cal=bpass_table')
     os.system('gpcopy vis=phase_table out=' + obs_par['target'] + '.' + obs_par['freq'])
-
 
     return
