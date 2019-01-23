@@ -232,6 +232,14 @@ os.system('gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=log_plots.pdf 
 os.chdir(args.outdir + obs_par['target'] + '/' + obs_par['configuration'])
 
 if args.mode == 'line':
+    os.system('mv temp_data line_' + obs_par['date'])
+if args.mode == 'cont':
+    os.system('mv temp_data cont_' + obs_par['date'])
+
+
+# old way of renaming directories:
+'''
+if args.mode == 'line':
     files = os.listdir('.')
     nruns = [0]
     for file in files:
@@ -239,6 +247,7 @@ if args.mode == 'line':
             nruns.append(int(file[8]))
     run = max(nruns) + 1
     os.system('mv temp_data line_run' + str(run))
+
 
 if args.mode == 'cont':
     files = os.listdir('.')
@@ -248,3 +257,4 @@ if args.mode == 'cont':
             nruns.append(int(file[8]))
     run = max(nruns) + 1
     os.system('mv temp_data cont_run' + str(run))
+'''
