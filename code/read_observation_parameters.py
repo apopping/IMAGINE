@@ -22,7 +22,7 @@ def read_observation_parameters(args, db_file):
 
 
     cur = conn.cursor()
-    cur.execute("SELECT target,configuration, phase_cal, line_if, cont_if, project, files, notes FROM observation WHERE id=" + str(args.id))
+    cur.execute("SELECT target, configuration, date, phase_cal, line_if, cont_if, project, files, notes FROM observation WHERE id=" + str(args.id))
     obs_val = cur.fetchall()
     print(obs_val)
     obs_keys = [description[0] for description in cur.description]
