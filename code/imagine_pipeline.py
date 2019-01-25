@@ -37,7 +37,7 @@ for more information
 
 parser = argparse.ArgumentParser(description=file_description,
                                  usage="imagine_pipeline.py",
-                                 epilog="last edited 2018")
+                                 epilog="last edited 2019")
 
 parser.add_argument("-i", "--id",
                     dest="id",
@@ -230,7 +230,15 @@ if args.mode == 'line':
               '*mom*.pdf *bpass_table*.pdf *phase_table*.pdf *time*.pdf')
 if args.mode == 'cont':
     os.system('gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=log_plots.pdf '
-              '*bpass_table*.pdf *phase_table*.pdf *time*.pdf')
+              '*map*.pdf *bpass_table*.pdf *phase_table*.pdf *time*.pdf')
+
+log_name = obs_par['target'] + '_' + args.mode + '_' + obs_par['configuration'] + \
+           '_' + obs_par['date'] + '_log.pdf'
+
+print(log_name)
+os.system('rm -rf *.ps')
+os.system('cp log_plots.pdf ../../' + log_name)
+
 
 # move the data to its final location:
 os.chdir(args.outdir + obs_par['target'] + '/' + obs_par['configuration'])

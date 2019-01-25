@@ -106,5 +106,9 @@ def plot_maps(args, obs_par):
             os.system('regrid in=' + map_in + ' out=' + map_out + ' tin=dss_blue.mir axes=1,2')
             os.system('cgdisp in=' + obs_par['target'] + '.clean.re type=pixel device=plot_map.ps/cps')
             os.system('cgdisp in=dss_blue.mir,' + obs_par['target'] + '.clean.re type=pixel,contour device=contour_map.ps/cps')
+            cmd = 'ps2pdf plot_map.ps plot_map.pdf'
+            subprocess.call(cmd, shell=True)
+            cmd = 'ps2pdf contour_map.ps contour_map.pdf'
+            subprocess.call(cmd, shell=True)
 
     return
