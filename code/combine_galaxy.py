@@ -207,7 +207,7 @@ for i in range(len(robust)):
             os.system(args.pythonpath + ' ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam)
             # do the image based continuum subtraction
             obs_par['base'] = base
-            contsub.imlin(args, obs_par)
+            contsub_imlin(args, obs_par)
 
 
 
