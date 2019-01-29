@@ -9,12 +9,20 @@ import os
 
 def contsub_imlin(args,obs_par):
     # go to the working directory
-    os.chdir(args.outdir + obs_par['target'] + '/' + obs_par['configuration'])
-    os.chdir('temp_data')
+    # os.chdir(args.outdir + obs_par['target'] + '/' + obs_par['configuration'])
+    # os.chdir('temp_data')
+
+
 
     # read the header and get freqeuncy information
-    os.system('gethd in=' + obs_par['target'] + '.map/crval3 > crval3.log')
-    os.system('gethd in=' + obs_par['target'] + '.map/cdelt3 > cdelt3.log')
+    if obs_par['base']:
+        base = obs_par['base']
+    else:
+        base = obs_par['target']
+
+    os.system('gethd in=' + base + '.map/crval3 > crval3.log')
+    os.system('gethd in=' + base + '.map/cdelt3 > cdelt3.log')
+
 
     crval_file = open('crval3.log', 'rt')
     for line in crval_file:
@@ -77,8 +85,8 @@ def contsub_imlin(args,obs_par):
 
     print(cont_chan)
 
-    incube = obs_par['target'] + '.clean'
-    outcube = obs_par['target'] + '.imcont'
+    incube = base + '.clean'
+    outcube = base + '.imcont'
 
     os.system('contsub in=' + incube + ' out=' + outcube + ' contchan="' + cont_chan + '" mode=poly,1')
 

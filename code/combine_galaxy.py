@@ -5,6 +5,7 @@ import os
 from ast import literal_eval
 import sqlite3
 from sqlite3 import Error
+from contsub_imlin import contsub_imlin
 
 
 file_description = '''
@@ -143,12 +144,17 @@ for i in range(len(configs)):
 
 
 # invert the data into visibilities
-chwidth = [2, 4, 8, 16]
-nchan = [600, 300, 150, 75]
-robust = [-1, 0, 1]
-cellsize = [20, 20, 20]
-imsize = [180, 180, 180]
+#chwidth = [2, 4, 8, 16]
+#nchan = [600, 300, 150, 75]
+#robust = [-1, 0, 1]
+#cellsize = [20, 20, 20]
+#imsize = [180, 180, 180]
 
+chwidth = [8, 16]
+nchan = [150, 75]
+robust = [-1, 1]
+cellsize = [20, 20]
+imsize = [180, 180]
 
 
 os.system('pwd')
@@ -176,8 +182,9 @@ for i in range(len(robust)):
 
     if args.mode == 'line':
         for j in range(len(chwidth)):
-            map = obs_par['target'] + '_' + args.mode + '_vel' + str(chwidth[j]) + '_rob' + rob_str + '.map'
-            beam = obs_par['target'] + '_' + args.mode + '_vel' + str(chwidth[j]) + '_rob' + rob_str + '.beam'
+            base = obs_par['target'] + '_' + args.mode + '_vel' + str(chwidth[j]) + '_rob' + rob_str
+            map =  base + '.map'
+            beam = base + '.beam'
             # define the spectral line settings
             vmin = int(obs_par['vel'] - (nchan[j] * chwidth[j] / 2))
             line_set = 'velocity,' + str(nchan[j]) + ',' + str(vmin) + ',' + str(chwidth[j])
@@ -196,7 +203,13 @@ for i in range(len(robust)):
                       'line=' + line_set +
                       ' "select=' + ant_set + '"')
 
+
             os.system(args.pythonpath + ' ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam)
+            # do the image based continuum subtraction
+            obs_par['base'] = base
+            contsub.imlin(args, obs_par)
+
+
 
 
 
