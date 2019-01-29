@@ -79,7 +79,8 @@ args = parser.parse_args()
 
 if args.reduce == 'yes':
     # do the data reduction from scratch
-    cmd = args.pythonpath + ' reduce_galaxy.py -g ' + args.galaxy + ' -dd ' + args.datadir + ' -od ' + args.outdir + ' -m ' + args.mode
+    cmd = args.pythonpath + ' reduce_galaxy.py -g ' + args.galaxy + ' -dd ' + args.datadir + \
+          ' -od ' + args.outdir + ' -m ' + args.mode + ' -p ' + args.pythonpath
     print('start reducing all the raw data')
     os.system(cmd)
 
