@@ -125,7 +125,7 @@ helpstring = " 'python imagine_pipeline.py --help' "
 
 if args.id != None:
     Id = args.id
-    print(f"start working on observation: {Id}")
+    print(f"start working on observation: {id}")
 else:
     print('No observation ID is given, extracting info from user input')
     # check whether input is given

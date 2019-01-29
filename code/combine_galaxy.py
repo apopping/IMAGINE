@@ -103,6 +103,8 @@ configs = literal_eval(args.config)
 
 # change to the output directory
 os.chdir(args.outdir)
+if not os.path.isdir(args.galaxy):
+    os.system('mkdir ' + args.galaxy)
 os.chdir(args.galaxy)
 if not os.path.isdir('combined'):
     os.system('mkdir combined')

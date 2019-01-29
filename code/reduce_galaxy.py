@@ -22,17 +22,14 @@ steps:
 
 '''
 
-
 parser = argparse.ArgumentParser(description=file_description,
                                  usage="reduce_galaxy.py",
                                  epilog="last edited 2019")
-
 
 parser.add_argument("-g", "--galaxy",
                     dest="galaxy",
                     default=None,
                     help="The galaxy to reduce")
-
 
 parser.add_argument("-dd", "--datadir",
                     dest="datadir",
@@ -49,15 +46,13 @@ parser.add_argument("-m", "--mode",
                     default='line',
                     help="observing mode: spectral line (line) or continuum (cont)")
 
-
-
 args = parser.parse_args()
 
-helpstring = " 'python reduce_galaxy.py --help' "
+helpstring = 'python reduce_galaxy.py --help'
 
 # check whether a galaxy is given
 if args.galaxy is None:
-    print(f"No galaxy is given given, see {helpstring}")
+    print(f'No galaxy is given given, see: {helpstring}')
     exit()
 
 # open the database
@@ -80,12 +75,3 @@ for i in range(len(IDs)):
     cmd = 'python imagine_pipeline.py -i ' + ID + ' -dd ' + args.datadir + ' -od ' + args.outdir + ' -m ' + args.mode
     print(f"finished reducing ID: {ID}")
     os.system(cmd)
-
-
-
-
-
-
-
-
-
