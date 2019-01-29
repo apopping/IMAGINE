@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1ddf2830-c0f9-4645-bae0-6b6bf52ca33f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/imagine_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/imagine_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/combine_galaxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/combine_galaxy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +45,7 @@
         <counts>
           <entry key="Python Console" value="1885" />
           <entry key="md" value="286" />
-          <entry key="py" value="20516" />
+          <entry key="py" value="20538" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
@@ -53,7 +53,7 @@
         <counts>
           <entry key="Markdown" value="286" />
           <entry key="PLAIN_TEXT" value="284" />
-          <entry key="Python" value="22401" />
+          <entry key="Python" value="22423" />
         </counts>
       </usages-collector>
     </session>
@@ -63,25 +63,36 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/code/read_observation_parameters.py">
+            <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+                <state relative-caret-position="256">
+                  <caret line="123" column="22" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="22" />
                   <folding>
-                    <element signature="e#79#93#0" expanded="true" />
-                    <marker date="1547176867717" expanded="true" signature="169:170" ph="..." />
+                    <element signature="e#24#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/code/reduce_galaxy.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="653">
+                  <caret line="80" column="14" lean-forward="true" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+                  <folding>
+                    <element signature="e#23#38#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
+            <entry file="file://$PROJECT_DIR$/code/combine_galaxy.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="125" column="14" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="14" />
+                <state relative-caret-position="615">
+                  <caret line="209" column="32" selection-start-line="209" selection-start-column="32" selection-end-line="209" selection-end-column="32" />
                   <folding>
-                    <element signature="e#24#39#0" expanded="true" />
+                    <element signature="e#23#38#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -130,8 +141,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/code/read_data.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="664">
-                      <caret line="96" selection-start-line="96" selection-end-line="96" />
+                    <state relative-caret-position="40">
+                      <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
                       <folding>
                         <marker date="1548218865942" expanded="true" signature="612:3242" ph="..." />
                       </folding>
@@ -139,11 +150,15 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/code/rename_data.py">
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/code/read_observation_parameters.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="265">
-                      <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+                    <state relative-caret-position="212">
+                      <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+                      <folding>
+                        <element signature="e#79#93#0" expanded="true" />
+                        <marker date="1548254786017" expanded="true" signature="169:170" ph="..." />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -151,54 +166,20 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/code/image_data.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="129">
-                      <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+                    <state relative-caret-position="44">
+                      <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/code/contsub_uvlin.py">
+                <entry file="file://$PROJECT_DIR$/code/autoclean.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="356">
-                      <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+                    <state relative-caret-position="185">
+                      <caret line="284" column="86" selection-start-line="284" selection-start-column="86" selection-end-line="284" selection-end-column="86" />
                       <folding>
-                        <marker date="1548218865950" expanded="true" signature="161:2840" ph="..." />
+                        <element signature="e#2031#2041#0" expanded="true" />
                       </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/code/quality_control.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="124">
-                      <caret line="92" column="20" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
-                      <folding>
-                        <element signature="e#92#101#0" expanded="true" />
-                        <marker date="1548224841302" expanded="true" signature="163:404" ph="..." />
-                        <marker date="1548224841302" expanded="true" signature="1589:2222" ph="..." />
-                        <marker date="1548224841302" expanded="true" signature="2260:2265" ph="..." />
-                        <marker date="1548224841302" expanded="true" signature="2260:4680" ph="..." />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/code/cal_data.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="340">
-                      <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/code/flag_data.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="255">
-                      <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
                     </state>
                   </provider>
                 </entry>
@@ -206,7 +187,7 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/code/make_moment.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="292">
+                    <state relative-caret-position="264">
                       <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
                     </state>
                   </provider>
@@ -215,13 +196,22 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/code/make_log.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="915">
-                      <caret line="63" column="36" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="36" />
+                    <state relative-caret-position="223">
+                      <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="36" />
                       <folding>
                         <element signature="e#76#85#0" expanded="true" />
                         <marker date="1547788715777" expanded="true" signature="500:2619" ph="..." />
                         <marker date="1547788715777" expanded="true" signature="500:2623" ph="..." />
                       </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/code/contsub_imlin.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="315">
+                      <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
                     </state>
                   </provider>
                 </entry>
@@ -276,6 +266,7 @@
         <option value="$PROJECT_DIR$/code/rename_data.py" />
         <option value="$PROJECT_DIR$/code/quality_control.py" />
         <option value="$PROJECT_DIR$/code/imagine_pipeline.py" />
+        <option value="$PROJECT_DIR$/code/combine_galaxy.py" />
       </list>
     </option>
   </component>
@@ -400,10 +391,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20747761" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1551792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -414,7 +405,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32981133" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.46548674" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.38394162" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32919708" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -511,11 +502,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/read_observation_parameters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="212">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
             <element signature="e#79#93#0" expanded="true" />
-            <marker date="1547176867717" expanded="true" signature="169:170" ph="..." />
+            <marker date="1548254786017" expanded="true" signature="169:170" ph="..." />
           </folding>
         </state>
       </provider>
@@ -556,8 +547,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/make_log.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="63" column="36" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="36" />
+        <state relative-caret-position="223">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="36" />
           <folding>
             <element signature="e#76#85#0" expanded="true" />
             <marker date="1547788715777" expanded="true" signature="500:2619" ph="..." />
@@ -566,17 +557,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/contsub_imlin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/read_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="40">
+          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
           <folding>
             <marker date="1548218865942" expanded="true" signature="612:3242" ph="..." />
           </folding>
@@ -609,7 +593,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/make_moment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
+        <state relative-caret-position="264">
           <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
         </state>
       </provider>
@@ -620,18 +604,14 @@
           <caret line="92" column="20" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
           <folding>
             <element signature="e#92#101#0" expanded="true" />
-            <marker date="1548224841302" expanded="true" signature="163:404" ph="..." />
-            <marker date="1548224841302" expanded="true" signature="1589:2222" ph="..." />
-            <marker date="1548224841302" expanded="true" signature="2260:2265" ph="..." />
-            <marker date="1548224841302" expanded="true" signature="2260:4680" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/image_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+        <state relative-caret-position="44">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -644,10 +624,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="125" column="14" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="14" />
+        <state relative-caret-position="256">
+          <caret line="123" column="22" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="22" />
           <folding>
             <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/contsub_imlin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/combine_galaxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="209" column="32" selection-start-line="209" selection-start-column="32" selection-end-line="209" selection-end-column="32" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
