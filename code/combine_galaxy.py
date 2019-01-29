@@ -70,12 +70,16 @@ parser.add_argument("-ant", "--ant",
                     default='(1,2,3,4,5)',
                     help="antennas to be used for imaging")
 
+parser.add_argument("-p", "--python",
+                    dest="pythonpath",
+                    default='python',
+                    help="The path to the python version to be used")
 
 args = parser.parse_args()
 
 if args.reduce == 'yes':
     # do the data reduction from scratch
-    cmd = 'python reduce_galaxy.py -g ' + args.galaxy + ' -dd ' + args.datadir + ' -od ' + args.outdir + ' -m ' + args.mode
+    cmd = args.pythonpath + ' reduce_galaxy.py -g ' + args.galaxy + ' -dd ' + args.datadir + ' -od ' + args.outdir + ' -m ' + args.mode
     print('start reducing all the raw data')
     os.system(cmd)
 
@@ -167,7 +171,7 @@ for i in range(len(robust)):
                   ' stokes=i slop=0.5 options=mfs,mosaic '
                   ' "select=' + ant_set + '"')
 
-        os.system('python ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam)
+        os.system(args.pythonpath + ' ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam)
 
     if args.mode == 'line':
         for j in range(len(chwidth)):
@@ -191,7 +195,7 @@ for i in range(len(robust)):
                       'line=' + line_set +
                       ' "select=' + ant_set + '"')
 
-            os.system('python ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam)
+            os.system(args.pythonpath + ' ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam)
 
 
 

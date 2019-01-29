@@ -46,13 +46,18 @@ parser.add_argument("-m", "--mode",
                     default='line',
                     help="observing mode: spectral line (line) or continuum (cont)")
 
+parser.add_argument("-p", "--python",
+                    dest="pythonpath",
+                    default='python',
+                    help="The path to the python version to be used")
+
 args = parser.parse_args()
 
 helpstring = 'python reduce_galaxy.py --help'
 
 # check whether a galaxy is given
 if args.galaxy is None:
-    print(f'No galaxy is given given, see: {helpstring}')
+    print(f"No galaxy is given given, see: {helpstring}")
     exit()
 
 # open the database
@@ -72,6 +77,6 @@ IDs = cur.fetchall()
 for i in range(len(IDs)):
     ID = str(IDs[i][0])
     print(f"start reducing ID: {ID}")
-    cmd = 'python imagine_pipeline.py -i ' + ID + ' -dd ' + args.datadir + ' -od ' + args.outdir + ' -m ' + args.mode
+    cmd = args.pythonpath + ' imagine_pipeline.py -i ' + ID + ' -dd ' + args.datadir + ' -od ' + args.outdir + ' -m ' + args.mode
     print(f"finished reducing ID: {ID}")
     os.system(cmd)
