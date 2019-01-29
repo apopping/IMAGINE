@@ -78,5 +78,6 @@ for i in range(len(IDs)):
     ID = str(IDs[i][0])
     print(f"start reducing ID: {ID}")
     cmd = args.pythonpath + ' imagine_pipeline.py -i ' + ID + ' -dd ' + args.datadir + ' -od ' + args.outdir + ' -m ' + args.mode
+    print(cmd)
     print(f"finished reducing ID: {ID}")
     os.system(cmd)
