@@ -278,7 +278,14 @@ run_command("fits op=xyout in=" + file_restor + " out=" + file_restor_fits);
 create_sofia_par(file_restor_fits, file_map_fits, file_sofia);
 
 # Run SoFiA
-run_command("sofia_pipeline.py " + file_sofia);
+#run_command("sofia_pipeline.py " + file_sofia);
+# hardcoded for now, but not a good solution
+myhost = os.uname()[1]
+if myhost = 'epeius.icrar.org':
+	run_command("~/anaconda2/bin/python sofia_pipeline.py " + file_sofia);
+else:
+	run_command("sofia_pipeline.py " + file_sofia);
+	
 
 # Convert SoFiA mask to Miriad
 run_command("fits op=xyin in=" + file_sofia_mask_fits + " out=" + file_sofia_mask);
