@@ -20,8 +20,8 @@ def contsub_imlin(args,obs_par):
     else:
         base = obs_par['target']
 
-    os.system('gethd in=' + base + '.map/crval3 > crval3.log')
-    os.system('gethd in=' + base + '.map/cdelt3 > cdelt3.log')
+    os.system('gethd in=' + base + '.clean/crval3 > crval3.log')
+    os.system('gethd in=' + base + '.clean/cdelt3 > cdelt3.log')
 
 
     crval_file = open('crval3.log', 'rt')
