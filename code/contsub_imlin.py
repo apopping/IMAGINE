@@ -15,10 +15,10 @@ def contsub_imlin(args,obs_par):
 
 
     # read the header and get freqeuncy information
-    if obs_par['base']:
-        base = obs_par['base']
-    else:
-        base = obs_par['target']
+    #if obs_par['base']:
+    #    base = obs_par['base']
+    #else:
+    #    base = obs_par['target']
 
     os.system('gethd in=' + base + '.clean/crval3 > crval3.log')
     os.system('gethd in=' + base + '.clean/cdelt3 > cdelt3.log')
