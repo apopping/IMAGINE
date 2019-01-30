@@ -20,8 +20,8 @@ def contsub_imlin(args,obs_par):
     #else:
     #    base = obs_par['target']
 
-    os.system('gethd in=' + base + '.clean/crval3 > crval3.log')
-    os.system('gethd in=' + base + '.clean/cdelt3 > cdelt3.log')
+    os.system('gethd in=' + obs_par['base'] + '.clean/crval3 > crval3.log')
+    os.system('gethd in=' + obs_par['base'] + '.clean/cdelt3 > cdelt3.log')
 
 
     crval_file = open('crval3.log', 'rt')
@@ -85,8 +85,8 @@ def contsub_imlin(args,obs_par):
 
     print(cont_chan)
 
-    incube = base + '.clean'
-    outcube = base + '.imcont'
+    incube = obs_par['base'] + '.clean'
+    outcube = obs_par['base'] + '.imcont'
 
     os.system('contsub in=' + incube + ' out=' + outcube + ' contchan="' + cont_chan + '" mode=poly,1')
 
