@@ -38,6 +38,7 @@ def read_observation_parameters(args, db_file):
 
     # add the extra paramaters to the dicitionary
     obs_par.update(extra_par)
+    obs_par['base'] = args.outdir + obs_par['target'] + '/' + obs_par['configuration'] + '/' + obs_par['target']
 
     print(obs_par)
 
