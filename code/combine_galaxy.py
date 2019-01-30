@@ -162,9 +162,12 @@ os.system('ls')
 
 for i in range(len(robust)):
     if robust[i] < 0:
-            rob_str = 'm' + str(abs(robust[i]))
+        rob_str = 'm' + str(abs(robust[i]))
+    else:
+        rob_str = str(abs(robust[i]))
     vis = 'temp_links/*'
     ant_set = 'ant' + str(args.ant)
+
     if args.mode == 'cont':
         map = obs_par['target'] + '_' + args.mode + '_rob' + rob_str + '.map'
         beam = obs_par['target'] + '_' + args.mode + '_rob' + rob_str + '.beam'
