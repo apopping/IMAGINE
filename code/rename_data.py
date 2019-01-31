@@ -33,4 +33,10 @@ def rename_data(args, obs_par):
             os.system('mv 0438-436.1419.2 0438-436.1416.7')
             obs_par['freq'] = '1416.7'
 
+    if obs_par['target'] == 'eso154-023':
+        if os.path.isdir('eso154-023.1418'):
+            os.system('mv eso154-023.1418 eso154-023.1417.7')
+            obs_par['freq'] = '1417.7'
+
+
     return obs_par

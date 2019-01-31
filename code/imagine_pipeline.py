@@ -105,12 +105,12 @@ parser.add_argument("-cw", "--chwidth",
 
 parser.add_argument("-is", "--imsize",
                     dest="imsize",
-                    default=256,
+                    default=240,
                     help="spatial size [pixels] of the output image")
 
 parser.add_argument("-cs", "--cellsize",
                     dest="cellsize",
-                    default=20,
+                    default=15,
                     help="pixel size of output image [arcsec]")
 
 

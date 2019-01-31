@@ -153,8 +153,8 @@ for i in range(len(configs)):
 chwidth = [8, 16]
 nchan = [150, 75]
 robust = [-1, 1]
-cellsize = [20, 20]
-imsize = [180, 180]
+cellsize = [10, 10]
+imsize = [360, 360]
 
 
 os.system('pwd')
