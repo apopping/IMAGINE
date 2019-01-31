@@ -213,12 +213,16 @@ print(f"finished cleaning of {obs_par['target']}")
 
 # do the image based continuum subtractio (imlin)
 if args.mode == 'line':
-    print('start image based continuum subtraction')
-    contsub_imlin(args, obs_par)
-
-# make moment maps of the line data
-if args.mode == 'line':
-    make_moment(args, obs_par)
+    # check whether the cleaning step has actually worked, as there are some cases
+    # where it fails as the beam cannot be fitted
+    if os.path.isdir(obs_par['target'] + '.clean'):
+        print('start image based continuum subtraction')
+        contsub_imlin(args, obs_par)
+        # make moment maps of the line data
+        make_moment(args, obs_par)
+    else:
+        print('There has been a problem in restoring the cleaned image')
+        print('No further proessing is done on deconvolved cubes')
 
 # generate more control plots
 qc.plot_uv(args, obs_par)
