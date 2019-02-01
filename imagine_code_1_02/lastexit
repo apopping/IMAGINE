@@ -1,0 +1,3 @@
+region=box(3000,3000,4000,4000)
+log=v_logs/abc.log
+in=ngc1512.dv
