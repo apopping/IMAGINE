@@ -20,10 +20,19 @@ def basic_clean(args,obs_par):
     mask = obs_par['target'] + '.mask'
     clean1 = obs_par['target'] + '.clean'
 
-    os.system('maths exp=' + map +
+    # maths can crash if there is an operator in the file name (e.g. eso270-017)
+    # create a temporary link to avoid this problem
+    os.system('ln -s ' + map + ' temp_map')
+
+    #os.system('maths exp=' + map +
+    #          ' mask="abs(' + map + ').gt.0.00001"' +
+    #          ' out=' + mask)
+
+    os.system('maths exp=temp_map' +
               ' mask="abs(' + map + ').gt.0.00001"' +
               ' out=' + mask)
 
+    os.system('rm -rf temp_map')
 
 
 
