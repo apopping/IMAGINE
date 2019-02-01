@@ -38,8 +38,8 @@ def aver_line_set(file, aver):
     print(f'chan_1 {chan_1}')
     print(f'increment {increment}')
 
-    out_chan = int(chans/args.aver)
-    line_set = 'channel,' + str(out_chan) + ',1,' + str(args.aver) + ',' + str(args.aver)
+    out_chan = int(chans/aver)
+    line_set = 'channel,' + str(out_chan) + ',1,' + str(aver) + ',' + str(aver)
 
     return line_set
 
