@@ -7,6 +7,43 @@ This script will check whether data exists and import it to be further processed
 import os
 
 
+def aver_line_set(file, aver):
+    # define the line setttings when averaging a file
+    # file = filename
+    # aver = number of channels to average
+
+    # read the number of channels:
+    cmd = 'prthd in=' + file + '> header.log'
+    os.system(cmd)
+    head_file = open('header.log', 'rt')
+    lines = []
+    for line in head_file:
+        print(f'lines : {line}')
+        lines.append(line)
+
+    os.system('rm -rf header.log')
+    header = lines[14][0:-4]
+    header = header.split(' ')
+    freq_set = []
+    for h in range(len(header)):
+        if header[h] != '':
+            freq_set.append(float(header[h]))
+
+    chans = freq_set[1]
+    chan_1 = freq_set[2]
+    increment = freq_set[3]
+
+    print('print frequency settings:')
+    print(f'chans {chans}')
+    print(f'chan_1 {chan_1}')
+    print(f'increment {increment}')
+
+    out_chan = int(chans/args.aver)
+    line_set = 'channel,' + str(out_chan) + ',1,' + str(args.aver) + ',' + str(args.aver)
+
+    return line_set
+
+
 def read_data(args, obs_par):
     cmd = None
     # create the work directory in case it does not exist:
@@ -59,35 +96,37 @@ def read_data(args, obs_par):
     print(obs_par)
 
     # read the number of channels:
-    cmd = 'prthd in=' + files[0] + '> header.log'
-    os.system(cmd)
-    head_file = open('header.log', 'rt')
-    lines = []
-    for line in head_file:
-        print(f'lines : {line}')
-        lines.append(line)
+    #cmd = 'prthd in=' + files[0] + '> header.log'
+    #os.system(cmd)
+    #head_file = open('header.log', 'rt')
+    #lines = []
+    #for line in head_file:
+    #    print(f'lines : {line}')
+    #    lines.append(line)
 
-    os.system('rm -rf header.log')
-    header = lines[14][0:-4]
-    header = header.split(' ')
-    freq_set = []
-    for h in range(len(header)):
-        if header[h] != '':
-            freq_set.append(float(header[h]))
+    #os.system('rm -rf header.log')
+    #header = lines[14][0:-4]
+    #header = header.split(' ')
+    #freq_set = []
+    #for h in range(len(header)):
+    #    if header[h] != '':
+    #        freq_set.append(float(header[h]))
 
-    chans = freq_set[1]
-    chan_1 = freq_set[2]
-    increment = freq_set[3]
+    #chans = freq_set[1]
+    #chan_1 = freq_set[2]
+    #increment = freq_set[3]
 
-    print('print frequency settings:')
-    print(f'chans {chans}')
-    print(f'chan_1 {chan_1}')
-    print(f'increment {increment}')
+    #print('print frequency settings:')
+    #print(f'chans {chans}')
+    #print(f'chan_1 {chan_1}')
+    #print(f'increment {increment}')
 
-    out_chan = int(chans/args.aver)
-    line_set = 'channel,' + str(out_chan) + ',1,' + str(args.aver) + ',' + str(args.aver)
+    #out_chan = int(chans/args.aver)
+    #line_set = 'channel,' + str(out_chan) + ',1,' + str(args.aver) + ',' + str(args.aver)
+
 
     for file in files:
+        line_set = aver_line_set(file, args.aver)
         print(f"averaging : {file}")
         print('uvaver vis=' + file + ' line=' + line_set + ' out=' + file + '.aver ')
         os.system('uvaver vis=' + file + ' line=' + line_set + ' out=' + file + '.aver ')
