@@ -22,17 +22,17 @@ def basic_clean(args,obs_par):
 
     # maths can crash if there is an operator in the file name (e.g. eso270-017)
     # create a temporary link to avoid this problem
-    os.system('ln -s ' + map + ' temp_map')
+    os.system('cp -r ' + map + ' tempmap')
 
     #os.system('maths exp=' + map +
     #          ' mask="abs(' + map + ').gt.0.00001"' +
     #          ' out=' + mask)
 
-    os.system('maths exp=temp_map' +
+    os.system('maths exp=tempmap' +
               ' mask="abs(' + map + ').gt.0.00001"' +
               ' out=' + mask)
 
-    os.system('rm -rf temp_map')
+    os.system('rm -rf tempmap')
 
 
 
