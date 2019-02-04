@@ -154,8 +154,13 @@ chwidth = [8, 16]
 nchan = [150, 75]
 robust = [-1, 1]
 cellsize = [10, 10]
-imsize = [360, 360]
+imsize = [512, 512]
 
+chwidth = [16]
+nchan = [75]
+robust = [1]
+cellsize = [10]
+imsize = [512]
 
 os.system('pwd')
 os.system('ls')
