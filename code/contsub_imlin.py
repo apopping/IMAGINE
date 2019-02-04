@@ -88,6 +88,6 @@ def contsub_imlin(args,obs_par):
     incube = obs_par['base'] + '.clean'
     outcube = obs_par['base'] + '.imcont'
 
-    os.system('contsub in=' + incube + ' out=' + outcube + ' contchan="' + cont_chan + '" mode=poly,1')
+    os.system('contsub in=' + incube + ' out=' + outcube + ' contchan="' + cont_chan + '" mode=poly,0')
 
     return
