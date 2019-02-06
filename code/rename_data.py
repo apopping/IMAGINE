@@ -13,6 +13,11 @@ def rename_data(args, obs_par):
     os.chdir('temp_data')
     files = os.listdir()
 
+    if obs_par['target'] == 'ngc7090':
+        if os.path.isdir('1934-638.1416.2'):
+            os.system('mv 1934-638.1416.2 1934-638.1415.2')
+            obs_par['freq'] = '1415.2'
+
     if obs_par['target'] == 'ngc7793':
         if os.path.isdir('pnt.2100'):
             os.system('mv pnt.2100 ngc7793.2100')

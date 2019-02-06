@@ -151,7 +151,7 @@ for i in range(len(configs)):
 #imsize = [180, 180, 180]
 
 chwidth = [8, 16]
-nchan = [150, 75]
+nchan = [128, 64]
 robust = [-1, 1]
 cellsize = [10, 10]
 imsize = [512, 512]
