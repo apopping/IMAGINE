@@ -218,6 +218,12 @@ for i in range(len(robust)):
             args.nchan = nchan[j]
             contsub_imlin(args, obs_par)
 
+            # replace zeros with blanks
+            os.system('maths exp=' + obs_par['base'] + '.imcont' + ' mask="' + obs_par['base'] + '.lt.1e+38" out=blanked'
+            os.system('mv blanked ' + obs_par['base'] + '.imcont')
+
+
+
 
 
 

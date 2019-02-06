@@ -299,7 +299,11 @@ else: run_command("clean map=" + file_map + " beam=" + file_beam + " out=" + fil
 run_command("restor map=" + file_map + " beam=" + file_beam + " model=" + file_model_2 + " out=" + file_restor_2);
 
 # Create final, masked cube
-run_command("maths exp=\"<" + file_restor_2 + ">\" mask=\"<" + file_map + ">.lt.1e+38\" out=" + file_out);
+#run_command("maths exp=\"<" + file_restor_2 + ">\" mask=\"<" + file_map + ">.lt.1e+38\" out=" + file_out);
+os.system('cp -r '+ file_restor_2 + ' ' + file_out)
+
+
+
 
 # Print summary and clean-up instructions
 if mosaic: obs_type = "mosaic";
