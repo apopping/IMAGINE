@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ddf2830-c0f9-4645-bae0-6b6bf52ca33f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/code/rename_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/rename_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagineV1.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/imagineV1.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/clean_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/clean_data.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +46,7 @@
         <counts>
           <entry key="Python Console" value="1934" />
           <entry key="md" value="286" />
-          <entry key="py" value="21712" />
+          <entry key="py" value="21719" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
@@ -54,7 +54,7 @@
         <counts>
           <entry key="Markdown" value="286" />
           <entry key="PLAIN_TEXT" value="284" />
-          <entry key="Python" value="23646" />
+          <entry key="Python" value="23653" />
         </counts>
       </usages-collector>
     </session>
@@ -151,10 +151,10 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/code/rename_data.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="395">
+                    <state relative-caret-position="300">
                       <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
                     </state>
                   </provider>
@@ -169,13 +169,13 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="false">
+              <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/code/clean_data.py">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="297">
-                      <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+                      <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
                       <folding>
-                        <marker date="1549005326641" expanded="true" signature="182:1468" ph="..." />
+                        <marker date="1549421504723" expanded="true" signature="182:1464" ph="..." />
                       </folding>
                     </state>
                   </provider>
@@ -263,10 +263,10 @@
         <option value="$PROJECT_DIR$/code/read_observation_parameters.py" />
         <option value="$PROJECT_DIR$/code/imagine_pipeline.py" />
         <option value="$PROJECT_DIR$/code/read_data.py" />
-        <option value="$PROJECT_DIR$/code/clean_data.py" />
         <option value="$PROJECT_DIR$/code/combine_galaxy.py" />
         <option value="$PROJECT_DIR$/code/contsub_imlin.py" />
         <option value="$PROJECT_DIR$/code/rename_data.py" />
+        <option value="$PROJECT_DIR$/code/clean_data.py" />
       </list>
     </option>
   </component>
@@ -392,7 +392,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1551792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -622,16 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/clean_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-          <folding>
-            <marker date="1549005326641" expanded="true" signature="182:1468" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/combine_galaxy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-218">
@@ -651,8 +640,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/rename_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
+        <state relative-caret-position="300">
           <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/clean_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding>
+            <marker date="1549421504723" expanded="true" signature="182:1464" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

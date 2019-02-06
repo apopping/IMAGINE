@@ -29,7 +29,7 @@ def basic_clean(args,obs_par):
     #          ' out=' + mask)
 
     os.system('maths exp=tempmap' +
-              ' mask="abs(' + map + ').gt.0.00001"' +
+              ' mask="abs(tempmap).gt.0.00001"' +
               ' out=' + mask)
 
     os.system('rm -rf tempmap')
