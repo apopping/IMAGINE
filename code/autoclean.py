@@ -76,7 +76,7 @@ def create_sofia_par(filename_in, filename_flag, filename_out):
 		output_file.write("SCfind.maskScaleZ\t=\t2.0\n");
 		output_file.write("SCfind.rmsMode\t=\tgauss\n");
 		output_file.write("SCfind.sizeFilter\t=\t0.0\n");
-		output_file.write("SCfind.threshold\t=\t5.0\n");
+		output_file.write("SCfind.threshold\t=\t7.0\n"); # changed from 5
 		output_file.write("SCfind.verbose\t=\ttrue\n");
 		output_file.write("flag.file\t=\t" + filename_flag + "\n");
 		output_file.write("flag.regions\t=\t[]\n");
@@ -89,7 +89,7 @@ def create_sofia_par(filename_in, filename_flag, filename_out):
 		output_file.write("merge.minSizeX\t=\t7\n");
 		output_file.write("merge.minSizeY\t=\t7\n");
 		output_file.write("merge.minSizeZ\t=\t7\n");
-		output_file.write("merge.positivity\t=\tfalse\n");
+		output_file.write("merge.positivity\t=\ttrue\n");  # changed from false
 		output_file.write("merge.radiusX\t=\t3\n");
 		output_file.write("merge.radiusY\t=\t3\n");
 		output_file.write("merge.radiusZ\t=\t3\n");
