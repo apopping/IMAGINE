@@ -159,8 +159,8 @@ imsize = [512, 512]
 chwidth = [8]
 nchan = [128]
 robust = [-1, 1]
-cellsize = [10]
-imsize = [512]
+cellsize = [10, 10]
+imsize = [512, 512]
 
 os.system('pwd')
 os.system('ls')
@@ -209,7 +209,7 @@ for i in range(len(robust)):
                       ' cell=' + str(cellsize[i]) +
                       ' stokes=i slop=0.5 options=mosaic '
                       'line=' + line_set +
-                      ' "select=' + ant_set + '"')
+                      ' select="' + ant_set + '"')
 
 
             os.system(args.pythonpath + ' ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam)
@@ -217,10 +217,6 @@ for i in range(len(robust)):
             obs_par['base'] = base + '.map'
             args.nchan = nchan[j]
             contsub_imlin(args, obs_par)
-
-            # replace zeros with blanks
-            os.system('maths exp=' + obs_par['base'] + '.imcont' + ' mask="' + obs_par['base'] + '.lt.1e+38" out=blanked')
-            os.system('mv blanked ' + obs_par['base'] + '.imcont')
 
 
 
