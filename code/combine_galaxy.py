@@ -156,9 +156,9 @@ robust = [-1, 1]
 cellsize = [10, 10]
 imsize = [512, 512]
 
-chwidth = [16]
-nchan = [64]
-robust = [1]
+chwidth = [8]
+nchan = [128]
+robust = [-1, 1]
 cellsize = [10]
 imsize = [512]
 
