@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ddf2830-c0f9-4645-bae0-6b6bf52ca33f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/run_all.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/imagine_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/imagine_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagineV1.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/imagineV1.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/run_all.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/run_all.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,14 +47,14 @@
           <entry key="Python Console" value="1934" />
           <entry key="md" value="286" />
           <entry key="py" value="22091" />
-          <entry key="sh" value="11" />
+          <entry key="sh" value="85" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="286" />
-          <entry key="PLAIN_TEXT" value="295" />
+          <entry key="PLAIN_TEXT" value="369" />
           <entry key="Python" value="24025" />
         </counts>
       </usages-collector>
@@ -82,8 +79,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/code/run_all.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="77" selection-start-column="77" selection-end-column="77" />
+                <state relative-caret-position="60">
+                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
                 </state>
               </provider>
             </entry>
@@ -694,8 +691,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/run_all.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="77" selection-start-column="77" selection-end-column="77" />
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
