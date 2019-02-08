@@ -94,12 +94,12 @@ parser.add_argument("-ant", "--ant",
 
 parser.add_argument("-nc", "--nchan",
                     dest="nchan",
-                    default=250,
+                    default=128,
                     help="number of channels in image cube")
 
 parser.add_argument("-cw", "--chwidth",
                     dest="chwidth",
-                    default=4,
+                    default=8,
                     help="channels width [km/s] in image cube")
 
 

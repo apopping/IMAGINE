@@ -1,0 +1,1 @@
+python combine_galaxy.py -g ngc3137 -dd /mnt/science1/imagine/rawdata/ngc3137/ -od /mnt/science1/imagine/test_processed/ -r yes -p /home/apopping/anaconda3/bin/python -o yes
