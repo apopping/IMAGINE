@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1ddf2830-c0f9-4645-bae0-6b6bf52ca33f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/code/run_all.sh" beforeDir="false" afterPath="$PROJECT_DIR$/code/run_all.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagineV1.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/imagineV1.sqlite" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,14 +48,14 @@
           <entry key="Python Console" value="1934" />
           <entry key="md" value="286" />
           <entry key="py" value="22091" />
-          <entry key="sh" value="85" />
+          <entry key="sh" value="311" />
           <entry key="txt" value="284" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="286" />
-          <entry key="PLAIN_TEXT" value="369" />
+          <entry key="PLAIN_TEXT" value="595" />
           <entry key="Python" value="24025" />
         </counts>
       </usages-collector>
@@ -79,8 +80,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/code/run_all.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+                <state relative-caret-position="510">
+                  <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
                 </state>
               </provider>
             </entry>
@@ -88,7 +89,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/code/reduce_galaxy.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1155">
+                <state relative-caret-position="602">
                   <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
                   <folding>
                     <element signature="e#23#38#0" expanded="true" />
@@ -100,8 +101,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/code/combine_galaxy.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-134">
-                  <caret line="162" column="18" selection-start-line="162" selection-start-column="18" selection-end-line="162" selection-end-column="18" />
+                <state relative-caret-position="99">
+                  <caret line="21" column="54" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="54" />
                   <folding>
                     <element signature="e#23#38#0" expanded="true" />
                   </folding>
@@ -565,16 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/reduce_galaxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
-          <folding>
-            <element signature="e#23#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../pipeline/IMAGINE_2018_11_16/process_imagine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -669,16 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/combine_galaxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="162" column="18" selection-start-line="162" selection-start-column="18" selection-end-line="162" selection-end-column="18" />
-          <folding>
-            <element signature="e#23#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -689,10 +670,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/combine_galaxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="54" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/reduce_galaxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/run_all.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="510">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
