@@ -157,7 +157,7 @@ cellsize = [10, 10]
 imsize = [512, 512]
 
 chwidth = [4]
-nchan = [128]
+nchan = [256]
 robust = [-1, 1]
 cellsize = [10, 10]
 imsize = [512, 512]
