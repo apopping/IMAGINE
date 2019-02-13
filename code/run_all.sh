@@ -32,3 +32,4 @@ python combine_galaxy.py -g ngc7793 -dd /mnt/science1/imagine/rawdata/ngc7793/ -
 
 
 
+python combine_galaxy.py -g ngc2997 -dd /mnt/science1/imagine/rawdata/ngc2997/ -od /mnt/science1/imagine/test_processed/ -r no -p /home/apopping/anaconda3/bin/python -o no -c '['h75', 'h168', 'h214', 'ew352', 'ew367', '750a', '750c', '750d']'
