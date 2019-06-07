@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1ddf2830-c0f9-4645-bae0-6b6bf52ca33f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagineV1.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/imagineV1.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/combine_galaxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/combine_galaxy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +17,8 @@
         <counts>
           <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
@@ -25,7 +26,7 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -49,7 +50,7 @@
         <counts>
           <entry key="Python Console" value="1934" />
           <entry key="md" value="286" />
-          <entry key="py" value="22096" />
+          <entry key="py" value="22133" />
           <entry key="sh" value="325" />
           <entry key="txt" value="284" />
         </counts>
@@ -58,7 +59,7 @@
         <counts>
           <entry key="Markdown" value="286" />
           <entry key="PLAIN_TEXT" value="609" />
-          <entry key="Python" value="24030" />
+          <entry key="Python" value="24067" />
         </counts>
       </usages-collector>
     </session>
@@ -70,11 +71,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1875">
-                  <caret line="137" selection-start-line="121" selection-end-line="137" />
-                  <folding>
-                    <element signature="e#24#39#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="150">
+                  <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
                 </state>
               </provider>
             </entry>
@@ -91,8 +89,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/code/reduce_galaxy.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="20" selection-start-line="20" selection-end-line="20" />
+                <state relative-caret-position="453">
+                  <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
                   <folding>
                     <element signature="e#23#38#0" expanded="true" />
                   </folding>
@@ -103,8 +101,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/code/combine_galaxy.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+                <state relative-caret-position="435">
+                  <caret line="168" column="28" selection-start-line="168" selection-start-column="28" selection-end-line="168" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#23#38#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -421,9 +422,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27698788" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27688065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -436,7 +438,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.38394162" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.48318583" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.48248175" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -569,11 +571,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/imagine_pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="137" selection-start-line="121" selection-end-line="137" />
-          <folding>
-            <element signature="e#24#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -586,18 +585,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/reduce_galaxy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="453">
+          <caret line="76" column="25" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
           <folding>
             <element signature="e#23#38#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/combine_galaxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -691,6 +683,16 @@
             <element signature="e#76#85#0" expanded="true" />
             <marker date="1547788715777" expanded="true" signature="500:2619" ph="..." />
             <marker date="1547788715777" expanded="true" signature="500:2623" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/combine_galaxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="168" column="28" selection-start-line="168" selection-start-column="28" selection-end-line="168" selection-end-column="28" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

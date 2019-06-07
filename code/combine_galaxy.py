@@ -162,6 +162,14 @@ robust = [-1, 1]
 cellsize = [10, 10]
 imsize = [512, 512]
 
+chwidth = [8]
+nchan = [128]
+robust = [-1, -0.5, 0.5, 1]
+cellsize = [10, 10, 10, 10]
+imsize = [512, 512, 512, 512]
+
+
+
 os.system('pwd')
 os.system('ls')
 
