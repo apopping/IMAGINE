@@ -60,7 +60,7 @@ def run_command(command):
 
 
 # Function to create SoFiA parameter file
-def create_sofia_par(filename_in, filename_flag, filename_out):
+def create_sofia_par(filename_in, filename_flag, filename_out, spec_mode):
 	with open(filename_out, "w") as output_file:
 		output_file.write("CNHI.maxScale\t=\t-1\n");
 		output_file.write("CNHI.medianTest\t=\ttrue\n");
@@ -71,7 +71,10 @@ def create_sofia_par(filename_in, filename_flag, filename_out):
 		output_file.write("SCfind.edgeMode\t=\tconstant\n");
 		output_file.write("SCfind.fluxRange\t=\tnegative\n");
 		output_file.write("SCfind.kernelUnit\t=\tpixel\n");
-		output_file.write("SCfind.kernels\t=\t[[ 0, 0, 0,'b'],[ 0, 0, 3,'b'],[ 0, 0, 7,'b'],[ 3, 3, 0,'b'],[ 3, 3, 3,'b'],[ 3, 3, 7,'b'],[ 6, 6, 0,'b'],[ 6, 6, 3,'b'],[ 6, 6, 7,'b'],[ 10, 10, 0,'b'],[ 10, 10, 3,'b'],[ 10, 10, 7,'b']]\n");
+		if spec_mode == 'cont':
+			output_file.write("SCfind.kernels\t=\t[[ 0, 0, 0,'b'][ 3, 3, 0,'b'],[ 6, 6, 0,'b'],[ 10, 10, 0,'b']]\n");
+		else:
+			output_file.write("SCfind.kernels\t=\t[[ 0, 0, 0,'b'],[ 0, 0, 3,'b'],[ 0, 0, 7,'b'],[ 3, 3, 0,'b'],[ 3, 3, 3,'b'],[ 3, 3, 7,'b'],[ 6, 6, 0,'b'],[ 6, 6, 3,'b'],[ 6, 6, 7,'b'],[ 10, 10, 0,'b'],[ 10, 10, 3,'b'],[ 10, 10, 7,'b']]\n");
 		output_file.write("SCfind.maskScaleXY\t=\t2.0\n");
 		output_file.write("SCfind.maskScaleZ\t=\t2.0\n");
 		output_file.write("SCfind.rmsMode\t=\tgauss\n");
@@ -88,11 +91,17 @@ def create_sofia_par(filename_in, filename_flag, filename_out):
 		output_file.write("import.weightsFunction\t=\t\n");
 		output_file.write("merge.minSizeX\t=\t7\n");
 		output_file.write("merge.minSizeY\t=\t7\n");
-		output_file.write("merge.minSizeZ\t=\t7\n");
+		if spec_mode == 'cont':
+			output_file.write("merge.minSizeZ\t=\t1\n");
+		else:
+			output_file.write("merge.minSizeZ\t=\t7\n");
 		output_file.write("merge.positivity\t=\ttrue\n");  # changed from false
 		output_file.write("merge.radiusX\t=\t3\n");
 		output_file.write("merge.radiusY\t=\t3\n");
-		output_file.write("merge.radiusZ\t=\t3\n");
+		if spec_mode == 'cont':
+			output_file.write("merge.radiusZ\t=\t1\n");
+		else:
+			output_file.write("merge.radiusZ\t=\t3\n");
 		output_file.write("optical.sourceCatalogue\t=\t\n");
 		output_file.write("optical.spatSize\t=\t0.01\n");
 		output_file.write("optical.specSize\t=\t1e+5\n");
@@ -174,17 +183,18 @@ def create_sofia_par(filename_in, filename_flag, filename_out):
 
 
 # Check command-line arguments
-if len(sys.argv) < 3 or len(sys.argv) > 4:
-	sys.stderr.write("Usage: python autoclean.py <dirty_map> <dirty_beam> [<rms>]\n");
+if len(sys.argv) < 4 or len(sys.argv) > 5:
+	sys.stderr.write("Usage: python autoclean.py <dirty_map> <dirty_beam> <mode> [<rms>]\n");
 	sys.exit(1);
 
 # Define basic parameters
 file_map  = sys.argv[1].rstrip("/");
 file_beam = sys.argv[2].rstrip("/");
 file_out  = file_map + ".clean";
+spec_mode = sys.argv[3];
 
-if len(sys.argv) > 3:
-	rms = abs(float(sys.argv[3]));
+if len(sys.argv) > 4:
+	rms = abs(float(sys.argv[4]));
 else:
 	rms = 0.0;
 

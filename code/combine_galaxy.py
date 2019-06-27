@@ -112,13 +112,13 @@ os.chdir(args.outdir)
 if not os.path.isdir(args.galaxy):
     os.system('mkdir ' + args.galaxy)
 os.chdir(args.galaxy)
-if not os.path.isdir('combined'):
-    os.system('mkdir combined')
-    os.chdir('combined')
+if not os.path.isdir('combined_' + args.mode):
+    os.system('mkdir combined_' + args.mode )
+    os.chdir('combined_' + args.mode)
 elif args.overwrite == 'yes':
     print('Combined products already exist but will be overwritten')
-    os.system('rm -rf combined/*')
-    os.chdir('combined')
+    os.system('rm -rf combined_' + args.mode + '/*')
+    os.chdir('combined_' + args.mode)
 else:
     print('Combined product already exist an cannot be overwritten')
     exit()
@@ -194,7 +194,7 @@ for i in range(len(robust)):
                   ' stokes=i slop=0.5 options=mfs,mosaic '
                   ' "select=' + ant_set + '"')
 
-        os.system(args.pythonpath + ' ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam)
+        os.system(args.pythonpath + ' ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam + ' ' + args.mode)
 
     if args.mode == 'line':
         for j in range(len(chwidth)):
@@ -220,7 +220,7 @@ for i in range(len(robust)):
                       ' select="' + ant_set + '"')
 
 
-            os.system(args.pythonpath + ' ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam)
+            os.system(args.pythonpath + ' ' + code_dir + '/code/autoclean.py ' + map + ' ' + beam + ' ' + args.mode)
             # do the image based continuum subtraction
             obs_par['base'] = base + '.map'
             args.nchan = nchan[j]
