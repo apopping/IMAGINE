@@ -72,7 +72,7 @@ def create_sofia_par(filename_in, filename_flag, filename_out, spec_mode):
 		output_file.write("SCfind.fluxRange\t=\tnegative\n");
 		output_file.write("SCfind.kernelUnit\t=\tpixel\n");
 		if spec_mode == 'cont':
-			output_file.write("SCfind.kernels\t=\t[[ 0, 0, 0,'b'][ 3, 3, 0,'b'],[ 6, 6, 0,'b'],[ 10, 10, 0,'b']]\n");
+			output_file.write("SCfind.kernels\t=\t[[ 0, 0, 0,'b'],[ 3, 3, 0,'b'],[ 6, 6, 0,'b'],[ 10, 10, 0,'b']]\n");
 		else:
 			output_file.write("SCfind.kernels\t=\t[[ 0, 0, 0,'b'],[ 0, 0, 3,'b'],[ 0, 0, 7,'b'],[ 3, 3, 0,'b'],[ 3, 3, 3,'b'],[ 3, 3, 7,'b'],[ 6, 6, 0,'b'],[ 6, 6, 3,'b'],[ 6, 6, 7,'b'],[ 10, 10, 0,'b'],[ 10, 10, 3,'b'],[ 10, 10, 7,'b']]\n");
 		output_file.write("SCfind.maskScaleXY\t=\t2.0\n");
