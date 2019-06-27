@@ -285,7 +285,7 @@ run_command("restor map=" + file_map + " beam=" + file_beam + " model=" + file_m
 run_command("fits op=xyout in=" + file_restor + " out=" + file_restor_fits);
 
 # Create SoFiA parameter file
-create_sofia_par(file_restor_fits, file_map_fits, file_sofia);
+create_sofia_par(file_restor_fits, file_map_fits, file_sofia, spec_mode);
 
 # Run SoFiA
 #run_command("sofia_pipeline.py " + file_sofia);
